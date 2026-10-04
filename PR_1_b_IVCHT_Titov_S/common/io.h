@@ -3,9 +3,12 @@
 void printNumberOfWork(int numberOfWork, char letter);
 void scanIntNumbers(int mass[], int size);
 void printEnterSomeNumbers(int size);
-void printNumbersWith(int mass[], int size, char sign);
+void printNumbersWithSign(int mass[], int size, const char* sign);
 void printEnterCoordinates(char sign);
 void scanDoubleNumbers(double mass[],  int start, int end);
+int generateRandomNumbers(void);
+void printGenerateNumber(int number);
+
 
 
 #endif

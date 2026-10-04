@@ -10,12 +10,12 @@ void work25A(int numberOfWork)
 	int* massForThreeNumbers = malloc(size * sizeof(int));
 	printEnterSomeNumbers(size);
 	scanIntNumbers(massForThreeNumbers, size);
-	printNumbersWith(massForThreeNumbers, size, '+');
+	printNumbersWithSign(massForThreeNumbers, size, "+");
 	printf("=%d\n", sum(massForThreeNumbers, size));
-	printNumbersWith(massForThreeNumbers, size, '*');
+	printNumbersWithSign(massForThreeNumbers, size, "*");
 	printf("=%d\n", multi(massForThreeNumbers, size));
 	printf("(");
-	printNumbersWith(massForThreeNumbers, size, '+');
+	printNumbersWithSign(massForThreeNumbers, size, "+");
 	printf(")/%d=%.3f\n", size, average(sum(massForThreeNumbers, size), size));
 }
 
@@ -29,5 +29,17 @@ void work25B(int numberOfWork)
 	printEnterCoordinates('B');
 	scanDoubleNumbers(massForCoordinates, 2, 4);
 	printf("Длина отрезка AB =%.3f \n", segmentLength(massForCoordinates));
+}
+
+void work25C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 3;
+	int threeDigitNumber = generateRandomNumbers();
+	printGenerateNumber(threeDigitNumber);
+	int* massThreeNumbers = fillReverseNumber(threeDigitNumber, size);
+	printf("Его цифры ");
+	printNumbersWithSign(massThreeNumbers, size, ", ");
+	printf("\n");
 
 }

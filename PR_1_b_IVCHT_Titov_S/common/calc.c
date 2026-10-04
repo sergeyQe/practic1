@@ -30,3 +30,18 @@ double segmentLength(double coordinates[])
 {
 	return sqrt(pow(coordinates[2] - coordinates[0],2) + pow(coordinates[3] - coordinates[1],2));
 }
+
+int mod(int number)
+{
+	return number%10;
+}
+
+int* fillReverseNumber(int number, int size)
+{
+	int* mass=malloc(size*sizeof(int));
+	for (int i = size - 1; i >= 0; i--) {
+		mass[i] = mod(number);
+		number /= 10;
+	}
+	return mass;
+}

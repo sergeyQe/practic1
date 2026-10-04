@@ -2,4 +2,5 @@
 #define TASKS_H
 void work25A(int numberOfWork);
 void work25B(int numberOfWork);
+void work25C(int numberOfWork);
 #endif

@@ -32,6 +32,7 @@ int main(void)
 		case 25:
 			work25A(numberOfPracticalWord);
 			work25B(numberOfPracticalWord);
+			work25C(numberOfPracticalWord);
 			break;
 
 		default:

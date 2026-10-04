@@ -3,6 +3,8 @@
 #include <xkeycheck.h>
 #include <stdlib.h>
 #include "io.h"
+#include <stdlib.h>
+#include <time.h>
 
 void printNumberOfWork(int numberOfWork, char letter) {
 	printf("Практическое задание %d%c\n", numberOfWork, letter);
@@ -27,10 +29,10 @@ void printEnterSomeNumbers(int size)
 }
 
 
-void printNumbersWith(int mass[], int size, char sign)
+void printNumbersWithSign(int mass[], int size, const char* sign)
 {
 	for (int i = 0; i < size - 1; i++) {
-		printf("%d%c", mass[i], sign);
+		printf("%d%s", mass[i], sign);
 	}
 	printf("%d", mass[size - 1]);
 
@@ -50,6 +52,16 @@ void scanDoubleNumbers(double mass[],  int start, int end)
 			while ((ch = getchar()) != '\n' && ch != EOF) {}
 		}
 	}
+}
+
+int generateRandomNumbers(void)
+{
+	return rand()%900 + 100;
+}
+
+void printGenerateNumber(int number)
+{
+	printf("Получено число \%d.\n", number);
 }
 
 
