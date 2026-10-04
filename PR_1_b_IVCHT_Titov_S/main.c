@@ -30,8 +30,8 @@ int main(void)
 
 		switch (numberOfPracticalWord) {
 		case 25:
-			printNumberOfWork(numberOfPracticalWord);
-			work25A();
+			work25A(numberOfPracticalWord);
+			work25B(numberOfPracticalWord);
 			break;
 
 		default:

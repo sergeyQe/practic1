@@ -4,14 +4,14 @@
 #include <stdlib.h>
 #include "io.h"
 
-void printNumberOfWork(int numberOfWork) {
-	printf("Практическое задание %d\n", numberOfWork);
+void printNumberOfWork(int numberOfWork, char letter) {
+	printf("Практическое задание %d%c\n", numberOfWork, letter);
 }
 
 
-void scanNumbers(int mass[], int size)
+void scanIntNumbers(int mass[], int size)
 {
-	printEnterSomeNumbers(size);
+	
 	for (int i = 0; i < size; i++) {
 		if (scanf("%d", &mass[i]) != 1) {
 			int ch;
@@ -34,6 +34,22 @@ void printNumbersWith(int mass[], int size, char sign)
 	}
 	printf("%d", mass[size - 1]);
 
+}
+
+void printEnterCoordinates(char sign)
+{
+	printf("Введите координаты точки %c:\n", sign);
+}
+
+
+void scanDoubleNumbers(double mass[],  int start, int end)
+{
+	for (int i = start; i < end; i++) {
+		if (scanf("%lf", &mass[i]) != 1) {
+			int ch;
+			while ((ch = getchar()) != '\n' && ch != EOF) {}
+		}
+	}
 }
 
 

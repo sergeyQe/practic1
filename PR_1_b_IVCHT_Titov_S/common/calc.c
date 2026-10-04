@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "calc.h"
+#include <math.h>
 int sum(int mass[], int size)
 {
 	int result = 0;
@@ -23,4 +24,9 @@ int multi(int mass[], int size)
 double average(int sum, int size)
 {
 	return (double)sum / (double)size;
+}
+
+double segmentLength(double coordinates[])
+{
+	return sqrt(pow(coordinates[2] - coordinates[0],2) + pow(coordinates[3] - coordinates[1],2));
 }

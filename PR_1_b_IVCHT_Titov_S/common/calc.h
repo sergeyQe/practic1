@@ -3,4 +3,5 @@
 int sum(int mass[], int size);
 int multi(int mass[], int size);
 double average(int sum, int size);
+double segmentLength(double coordinates[]);
 #endif
