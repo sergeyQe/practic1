@@ -45,3 +45,20 @@ int* fillReverseNumber(int number, int size)
 	}
 	return mass;
 }
+
+int compareInt(const void* a, const void* b) {
+	int x = *(const int *)a;
+	int y = *(const int*)b;
+	return (x > y) - (x < y);
+
+}
+
+int findMaxIntNumber(int* mass, int size)
+{
+	return mass[size-1];
+}
+
+void sortDigitNumbers(int* mass, int size)
+{
+	qsort(mass, size, sizeof(int), compareInt);
+}

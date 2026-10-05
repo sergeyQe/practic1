@@ -64,4 +64,11 @@ void printGenerateNumber(int number)
 	printf("Получено число \%d.\n", number);
 }
 
+void printMaxIntNumber(int number)
+{
+	printf("Максимальное число %d\n", number);
+}
+
+
+
 

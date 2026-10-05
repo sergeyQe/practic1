@@ -43,3 +43,14 @@ void work25C(int numberOfWork)
 	printf("\n");
 
 }
+
+void work26A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	int size = 3;
+	printEnterSomeNumbers(size);
+	int* massForThreeNumbers = malloc(size * sizeof(int));
+	scanIntNumbers(massForThreeNumbers, size);
+	sortDigitNumbers(massForThreeNumbers, size);
+	printMaxIntNumber(findMaxIntNumber(massForThreeNumbers, size));
+}

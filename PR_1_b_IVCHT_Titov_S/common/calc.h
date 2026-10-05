@@ -6,4 +6,7 @@ double average(int sum, int size);
 double segmentLength(double coordinates[]);
 int mod(int number);
 int* fillReverseNumber(int number, int size);
+void sortDigitNumbers(int* mass, int size);
+int compareInt(const void* a, const void* b);
+int findMaxIntNumber(int* mass, int size);
 #endif
