@@ -9,6 +9,7 @@ void scanDoubleNumbers(double mass[],  int start, int end);
 int generateRandomNumbers(void);
 void printGenerateNumber(int number);
 void printMaxIntNumber(int number);
+const char* numberWordForm(int size);
 
 
 

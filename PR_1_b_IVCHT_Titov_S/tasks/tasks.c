@@ -54,3 +54,14 @@ void work26A(int numberOfWork)
 	sortDigitNumbers(massForThreeNumbers, size);
 	printMaxIntNumber(findMaxIntNumber(massForThreeNumbers, size));
 }
+
+void work26B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 5;
+	printEnterSomeNumbers(size);
+	int* massForFiveNumbers = malloc(size * sizeof(int));
+	scanIntNumbers(massForFiveNumbers, size);
+	sortDigitNumbers(massForFiveNumbers, size);
+	printMaxIntNumber(findMaxIntNumber(massForFiveNumbers, size));
+}

@@ -13,7 +13,7 @@ void printNumberOfWork(int numberOfWork, char letter) {
 
 void scanIntNumbers(int mass[], int size)
 {
-	
+
 	for (int i = 0; i < size; i++) {
 		if (scanf("%d", &mass[i]) != 1) {
 			int ch;
@@ -22,10 +22,23 @@ void scanIntNumbers(int mass[], int size)
 	}
 }
 
+const char* numberWordForm(int size) {
+	if (size % 100 >= 11 && size % 100 <= 14) {
+		return "чисел";
+	}
+	else if (size % 10 == 1) {
+		return "число";
+	}
+	else if (size % 10 >= 2 && size % 10 <= 4) {
+		return "числа";
+	}
+	else return "чисел";
+}
 
 void printEnterSomeNumbers(int size)
 {
-	printf("¬ведите %d число(ел\\ла)\n", size);
+	const char* result = numberWordForm(size);
+	printf("¬ведите %d %s\n", size, result);
 }
 
 
@@ -44,7 +57,7 @@ void printEnterCoordinates(char sign)
 }
 
 
-void scanDoubleNumbers(double mass[],  int start, int end)
+void scanDoubleNumbers(double mass[], int start, int end)
 {
 	for (int i = start; i < end; i++) {
 		if (scanf("%lf", &mass[i]) != 1) {
@@ -56,7 +69,7 @@ void scanDoubleNumbers(double mass[],  int start, int end)
 
 int generateRandomNumbers(void)
 {
-	return rand()%900 + 100;
+	return rand() % 900 + 100;
 }
 
 void printGenerateNumber(int number)
