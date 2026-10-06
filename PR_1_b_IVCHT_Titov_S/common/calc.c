@@ -67,8 +67,32 @@ int findMaxIntNumber(int* mass, int size)
 
 
 
+
+
 void sortDigitNumbers(int* mass, int size)
 {
 	qsort(mass, size, sizeof(int), compareInt);
+}
+#pragma endregion
+
+#pragma region 27
+int countDuplicates(int mass[], int size)
+{
+	int count = 0;
+	sortDigitNumbers(mass, size);
+	int flag = 0;
+	for (int i = 0; i < size - 1; i++) {
+		if (mass[i] == mass[i + 1]) {
+			count++;
+			if (flag == 0) {
+				count++;
+				flag = 1;
+			}
+		}
+		else {
+			flag = 0;
+		}
+	}
+	return count;
 }
 #pragma endregion

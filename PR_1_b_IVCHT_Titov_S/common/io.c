@@ -37,6 +37,8 @@ const char* numberWordForm(int size) {
 	else return "чисел";
 }
 
+
+
 void printEnterSomeNumbers(int size)
 {
 	const char* result = numberWordForm(size);
@@ -88,6 +90,25 @@ void printMaxIntNumber(int number)
 #pragma endregion 
 
 
+
+#pragma region 27
+
+void printCountDublicateNumber(int count)
+{
+	if (count == 3) {
+		printf("Все числа одинаковые.\n");
+	}
+	else if (count == 2) {
+		printf("Два числа одинаковые.\n");
+	}
+	else {
+		printf("Нет одинаковых чисел.\n");
+	}
+}
+
+
+
+#pragma endregion 
 
 
 

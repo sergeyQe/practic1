@@ -81,4 +81,18 @@ void work26C(int numberOfWork)
 	int countPerson = findCountOlderPeople(threePersons, size);
 	printOldPersons(threePersons, countPerson, size);
 }
+
+#pragma endregion
+
+#pragma region 27
+void work27A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	int size = 3;
+	int* massForThreeNumbers = malloc(size * sizeof(int));
+	printEnterSomeNumbers(size);
+	scanIntNumbers(massForThreeNumbers, size);
+	int count = countDuplicates(massForThreeNumbers, size);
+	printCountDublicateNumber(count);
+}
 #pragma endregion

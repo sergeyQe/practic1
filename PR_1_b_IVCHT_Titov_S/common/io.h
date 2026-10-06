@@ -16,7 +16,10 @@ void printMaxIntNumber(int number);
 const char* numberWordForm(int size);
 #pragma endregion
 
+#pragma region 27
+void printCountDublicateNumber(int count);
 
+#pragma end region
 
 
 

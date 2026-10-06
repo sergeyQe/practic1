@@ -16,4 +16,7 @@ int compareInt(const void* a, const void* b);
 int findMaxIntNumber(int* mass, int size);
 #pragma endregion
 
+#pragma region 27
+int countDuplicates(int mass[], int size);
+#pragma endregion
 #endif
