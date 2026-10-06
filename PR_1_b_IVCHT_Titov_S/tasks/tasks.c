@@ -4,6 +4,8 @@
 #include "io.h" 
 #include "calc.h"
 #include "personAge.h"
+
+#pragma region 25
 void work25A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork,'A');
@@ -44,7 +46,9 @@ void work25C(int numberOfWork)
 	printf("\n");
 
 }
+#pragma endregion
 
+#pragma region 26
 void work26A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -76,6 +80,5 @@ void work26C(int numberOfWork)
 	sortStruct(threePersons, size);
 	int countPerson = findCountOlderPeople(threePersons, size);
 	printOldPersons(threePersons, countPerson, size);
-
-
 }
+#pragma endregion

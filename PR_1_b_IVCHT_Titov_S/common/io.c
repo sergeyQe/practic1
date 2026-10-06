@@ -6,17 +6,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-struct personAge {
-	const char* name;
-	int age;
 
-};
 
 void printNumberOfWork(int numberOfWork, char letter) {
 	printf("Практическое задание %d%c\n", numberOfWork, letter);
 }
 
-
+#pragma region 25
 void scanIntNumbers(int mass[], int size)
 {
 
@@ -72,7 +68,9 @@ void scanDoubleNumbers(double mass[], int start, int end)
 		}
 	}
 }
+#pragma endregion
 
+#pragma region 26
 int generateRandomNumbers(void)
 {
 	return rand() % 900 + 100;
@@ -87,7 +85,7 @@ void printMaxIntNumber(int number)
 {
 	printf("Максимальное число %d\n", number);
 }
-
+#pragma endregion 
 
 
 

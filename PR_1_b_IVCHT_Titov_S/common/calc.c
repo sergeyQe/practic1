@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "calc.h"
 #include <math.h>
+
+#pragma region 25
 int sum(int mass[], int size)
 {
 	int result = 0;
@@ -46,7 +48,9 @@ int* fillReverseNumber(int number, int size)
 	}
 	return mass;
 }
+#pragma endregion
 
+#pragma region 26
 int compareInt(const void* a, const void* b)
 {
 	int x = *(const int*)a;
@@ -67,3 +71,4 @@ void sortDigitNumbers(int* mass, int size)
 {
 	qsort(mass, size, sizeof(int), compareInt);
 }
+#pragma endregion
