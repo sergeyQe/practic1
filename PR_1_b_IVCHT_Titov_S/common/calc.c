@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include "calc.h"
 #include <math.h>
@@ -28,17 +29,17 @@ double average(int sum, int size)
 
 double segmentLength(double coordinates[])
 {
-	return sqrt(pow(coordinates[2] - coordinates[0],2) + pow(coordinates[3] - coordinates[1],2));
+	return sqrt(pow(coordinates[2] - coordinates[0], 2) + pow(coordinates[3] - coordinates[1], 2));
 }
 
 int mod(int number)
 {
-	return number%10;
+	return number % 10;
 }
 
 int* fillReverseNumber(int number, int size)
 {
-	int* mass=malloc(size*sizeof(int));
+	int* mass = malloc(size * sizeof(int));
 	for (int i = size - 1; i >= 0; i--) {
 		mass[i] = mod(number);
 		number /= 10;
@@ -46,17 +47,21 @@ int* fillReverseNumber(int number, int size)
 	return mass;
 }
 
-int compareInt(const void* a, const void* b) {
-	int x = *(const int *)a;
+int compareInt(const void* a, const void* b)
+{
+	int x = *(const int*)a;
 	int y = *(const int*)b;
 	return (x > y) - (x < y);
-
 }
+
+
 
 int findMaxIntNumber(int* mass, int size)
 {
-	return mass[size-1];
+	return mass[size - 1];
 }
+
+
 
 void sortDigitNumbers(int* mass, int size)
 {

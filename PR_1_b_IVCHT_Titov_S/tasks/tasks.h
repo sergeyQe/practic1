@@ -5,4 +5,5 @@ void work25B(int numberOfWork);
 void work25C(int numberOfWork);
 void work26A(int numberOfWork);
 void work26B(int numberOfWork);
+void work26C(int numberOfWork);
 #endif

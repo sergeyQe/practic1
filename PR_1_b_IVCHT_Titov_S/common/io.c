@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+struct personAge {
+	const char* name;
+	int age;
+
+};
+
 void printNumberOfWork(int numberOfWork, char letter) {
 	printf("Практическое задание %d%c\n", numberOfWork, letter);
 }
@@ -81,6 +87,9 @@ void printMaxIntNumber(int number)
 {
 	printf("Максимальное число %d\n", number);
 }
+
+
+
 
 
 

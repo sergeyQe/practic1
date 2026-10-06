@@ -27,6 +27,12 @@
     <ClCompile Include="tasks\tasks.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="personAge.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="personAge.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\calc.h">

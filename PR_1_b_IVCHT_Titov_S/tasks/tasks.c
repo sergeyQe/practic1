@@ -3,6 +3,7 @@
 #include "tasks.h"
 #include "io.h" 
 #include "calc.h"
+#include "personAge.h"
 void work25A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork,'A');
@@ -64,4 +65,17 @@ void work26B(int numberOfWork)
 	scanIntNumbers(massForFiveNumbers, size);
 	sortDigitNumbers(massForFiveNumbers, size);
 	printMaxIntNumber(findMaxIntNumber(massForFiveNumbers, size));
+}
+
+void work26C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 3;
+	struct personAge* threePersons = fillPerson();
+	scanPeopleAge(threePersons, size);
+	sortStruct(threePersons, size);
+	int countPerson = findCountOlderPeople(threePersons, size);
+	printOldPersons(threePersons, countPerson, size);
+
+
 }

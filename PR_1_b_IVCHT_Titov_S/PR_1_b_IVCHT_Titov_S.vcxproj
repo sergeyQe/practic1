@@ -131,6 +131,8 @@
     <ClCompile Include="common\calc.c" />
     <ClCompile Include="common\io.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="common\personAge.c" />
+    <ClCompile Include="common\personAge.h" />
     <ClCompile Include="tasks\tasks.c" />
   </ItemGroup>
   <ItemGroup>
