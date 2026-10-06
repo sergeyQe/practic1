@@ -3,7 +3,6 @@
 #include <xkeycheck.h>
 #include <stdlib.h>
 #include "io.h"
-#include <stdlib.h>
 #include <time.h>
 
 
@@ -17,10 +16,10 @@ void scanIntNumbers(int mass[], int size)
 {
 
 	for (int i = 0; i < size; i++) {
-		if (scanf("%d", &mass[i]) != 1) {
-			int ch;
-			while ((ch = getchar()) != '\n' && ch != EOF) {}
+		if (scanInt(&mass[i]) != 1) {
+			clearInputBuffer();
 		}
+
 	}
 }
 
@@ -107,7 +106,35 @@ void printCountDublicateNumber(int count)
 }
 
 
+void printPutNumberOfMonth() {
+	printf("Введите номер месяца:\n");
+}
 
+int scanNumberOfMonth() {
+	int numberOfMonth = 0;
+	if (scanInt(&numberOfMonth) != 1) {
+		clearInputBuffer();
+	}
+	return numberOfMonth;
+}
+
+void printMonth(int numberOfMonth) {
+	if ((numberOfMonth >= 1 && numberOfMonth <= 2) || numberOfMonth == 12) {
+		printf("Зима.\n");
+	}
+	else if (numberOfMonth >= 3 && numberOfMonth <= 5) {
+		printf("Весна.\n");
+	}
+	else if (numberOfMonth >= 6 && numberOfMonth <= 8) {
+		printf("Лето.\n");
+	}
+	else if (numberOfMonth >= 9 && numberOfMonth <= 11) {
+		printf("Осень.\n");
+	}
+	else {
+		printf("Неверный номер месяца.\n");
+	}
+}
 #pragma endregion 
 
 

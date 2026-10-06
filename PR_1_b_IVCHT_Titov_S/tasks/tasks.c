@@ -94,5 +94,13 @@ void work27A(int numberOfWork)
 	scanIntNumbers(massForThreeNumbers, size);
 	int count = countDuplicates(massForThreeNumbers, size);
 	printCountDublicateNumber(count);
+	
+}
+
+void work27B(int numberOfWork) {
+	printNumberOfWork(numberOfWork, 'B');
+	printPutNumberOfMonth();
+	int numberOfMonth = scanNumberOfMonth();
+	printMonth(numberOfMonth);
 }
 #pragma endregion

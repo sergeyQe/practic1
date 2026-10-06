@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "calc.h"
 #include <math.h>
+#include <cstdio>
 
 #pragma region 25
 int sum(int mass[], int size)
@@ -48,6 +49,15 @@ int* fillReverseNumber(int number, int size)
 	}
 	return mass;
 }
+
+int scanInt(int* value) {
+	return scanf("%d", value) == 1;
+}
+
+void clearBuffer(void) {
+	int ch;
+	while((ch=getchar())!='\n'&&ch!= EOF){}
+}
 #pragma endregion
 
 #pragma region 26
@@ -64,9 +74,6 @@ int findMaxIntNumber(int* mass, int size)
 {
 	return mass[size - 1];
 }
-
-
-
 
 
 void sortDigitNumbers(int* mass, int size)

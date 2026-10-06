@@ -7,6 +7,8 @@ int multi(int mass[], int size);
 double average(int sum, int size);
 double segmentLength(double coordinates[]);
 int mod(int number);
+int scanInt(int*value);
+void clearBuffer(void);
 #pragma endregion
 
 #pragma region 26
@@ -18,5 +20,6 @@ int findMaxIntNumber(int* mass, int size);
 
 #pragma region 27
 int countDuplicates(int mass[], int size);
+
 #pragma endregion
 #endif
