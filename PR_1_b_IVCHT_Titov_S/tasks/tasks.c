@@ -100,7 +100,15 @@ void work27A(int numberOfWork)
 void work27B(int numberOfWork) {
 	printNumberOfWork(numberOfWork, 'B');
 	printPutNumberOfMonth();
-	int numberOfMonth = scanNumberOfMonth();
+	int numberOfMonth = scanNumber();
 	printMonth(numberOfMonth);
+}
+void work27C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	printInputAge();
+	printAge(scanNumber());
+	
+
 }
 #pragma endregion

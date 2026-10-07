@@ -122,12 +122,12 @@ void printPutNumberOfMonth() {
 	printf("¬ведите номер мес€ца:\n");
 }
 
-int scanNumberOfMonth() {
-	int numberOfMonth = 0;
-	if (scanInt(&numberOfMonth) != 1) {
+int scanNumber() {
+	int number = 0;
+	if (scanInt(&number) != 1) {
 		clearBuffer();
 	}
-	return numberOfMonth;
+	return number;
 }
 
 void printMonth(int numberOfMonth) {
@@ -145,6 +145,26 @@ void printMonth(int numberOfMonth) {
 	}
 	else {
 		printf("Ќеверный номер мес€ца.\n");
+	}
+}
+
+void printInputAge(void)
+{
+	printf("¬ведите возраст: ");
+}
+void printAge(int age)
+{
+	if (age <= 0 || age>120) {
+		printf("¬озраст должен быть от 1 до 120\n");
+	}
+	else if (age%100 >= 11 && age%100 <= 14||age%10>=5&&age%10<=9||age%10==0) {
+		printf("¬ам %d лет.\n",age);
+	}
+	else if (age%10==1) {
+		printf("¬ам %d год.\n", age);
+	}
+	else {
+		printf("¬ам %d года.\n", age);
 	}
 }
 #pragma endregion 

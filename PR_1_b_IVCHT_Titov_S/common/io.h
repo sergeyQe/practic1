@@ -21,8 +21,10 @@ const char* numberWordForm(int size);
 #pragma region 27
 void printCountDublicateNumber(int count);
 void printPutNumberOfMonth();
-int scanNumberOfMonth();
+int scanNumber();
 void printMonth(int numberOfMonth);
+void printInputAge(void);
+void printAge(int age);
 #pragma endregion
 
 
