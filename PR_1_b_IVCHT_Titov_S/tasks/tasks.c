@@ -101,14 +101,37 @@ void work27B(int numberOfWork) {
 	printNumberOfWork(numberOfWork, 'B');
 	printPutNumberOfMonth();
 	int numberOfMonth = scanNumber();
-	printMonth(numberOfMonth);
+	printSeason(numberOfMonth);
 }
 void work27C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
 	printInputAge();
 	printAge(scanNumber());
-	
+}
+
+#pragma endregion
+
+#pragma region 28
+void work28A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	printPutNumberOfMonth();
+	int numberOfMonth = scanNumber();
+	const char* month = monthNameByNumber(numberOfMonth);
+	const char* season = seasonNameByNumber(numberOfMonth);
+	printMonthAndSeason(month, season);
+}
+
+void work28B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	printInputDayAndMonth();
+	int size = 2;
+	int* massOfDayAndMonth = malloc(size * sizeof(int));
+	scanIntNumbers(massOfDayAndMonth, size);
 
 }
+
+
 #pragma endregion

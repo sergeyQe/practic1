@@ -9,4 +9,7 @@ void work26C(int numberOfWork);
 void work27A(int numberOfWork);
 void work27B(int numberOfWork);
 void work27C(int numberOfWork);
+void work28A(int numberOfWork);
+void work28B(int numberOfWork);
+void work28C(int numberOfWork);
 #endif

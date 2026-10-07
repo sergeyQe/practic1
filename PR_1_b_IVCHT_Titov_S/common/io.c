@@ -130,7 +130,7 @@ int scanNumber() {
 	return number;
 }
 
-void printMonth(int numberOfMonth) {
+void printSeason(int numberOfMonth) {
 	if ((numberOfMonth >= 1 && numberOfMonth <= 2) || numberOfMonth == 12) {
 		printf("«има.\n");
 	}
@@ -154,21 +154,117 @@ void printInputAge(void)
 }
 void printAge(int age)
 {
-	if (age <= 0 || age>120) {
+	if (age <= 0 || age > 120) {
 		printf("¬озраст должен быть от 1 до 120\n");
 	}
-	else if (age%100 >= 11 && age%100 <= 14||age%10>=5&&age%10<=9||age%10==0) {
-		printf("¬ам %d лет.\n",age);
+	else if (age % 100 >= 11 && age % 100 <= 14 || age % 10 >= 5 && age % 10 <= 9 || age % 10 == 0) {
+		printf("¬ам %d лет.\n", age);
 	}
-	else if (age%10==1) {
+	else if (age % 10 == 1) {
 		printf("¬ам %d год.\n", age);
 	}
 	else {
 		printf("¬ам %d года.\n", age);
 	}
 }
+
 #pragma endregion 
 
 
+#pragma region 28
+const char* monthNameByNumber(int numberOfMonth)
+{
+	char* month;
+	switch (numberOfMonth) {
+	case 1:
+		month = "€нварь";
+		break;
+	case 2:
+		month = "февраль";
+		break;
+	case 3:
+		month = "март";
+		break;
+	case 4:
+		month = "апрель";
+		break;
+	case 5:
+		month = "май";
+		break;
+	case 6:
+		month = "июнь";
+		break;
+	case 7:
+		month = "июль";
+		break;
+	case 8:
+		month = "август";
+		break;
+	case 9:
+		month = "сент€брь";
+		break;
+	case 10:
+		month = "окт€брь";
+		break;
+	case 11:
+		month = "но€брь";
+		break;
+	case 12:
+		month = "декабрь";
+		break;
+	default:
+		month = "неверный мес€ц";
+		break;
+	}
+	return month;
+}
+
+
+const char* seasonNameByNumber(int numberOfMonth) 
+{
+	char* season;
+	switch (numberOfMonth) {
+	case 1:
+	case 2:
+	case 12:
+		season = "зима";
+		break;
+	case 3:
+	case 4:
+	case 5:
+		season = "весна";
+		break;
+	case 6:
+	case 7:
+	case 8:
+		season = "лето";
+		break;
+	case 9:
+	case 10:
+	case 11:
+		season = "осень";
+		break;
+	default:
+		season = "неверный сезон";
+		break;
+	}
+	return season;
+
+}
+printMonthAndSeason(const char* month, const char* season)
+{
+	if (month == "неверный мес€ц") {
+		printf("Ќеверный номер мес€ца.\n");
+		return;
+	}
+	printf("Ётот мес€ц Ц %s, врем€ года - %s.\n", month, season);
+}
+
+printInputDayAndMonth()
+{
+	printf("¬ведите день и мес€ц : ");
+}
+
+#pragma endregion
 
 

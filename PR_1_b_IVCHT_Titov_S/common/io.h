@@ -22,11 +22,18 @@ const char* numberWordForm(int size);
 void printCountDublicateNumber(int count);
 void printPutNumberOfMonth();
 int scanNumber();
-void printMonth(int numberOfMonth);
+void printSeason(int numberOfMonth);
 void printInputAge(void);
 void printAge(int age);
 #pragma endregion
 
+#pragma region 28
+const char* monthNameByNumber(int numberOfMonth);
+const char* seasonNameByNumber(int numberOfMonth);
+printMonthAndSeason(const char* month, const char* season);
+printInputDayAndMonth();
+
+#pragma endregion
 
 
 

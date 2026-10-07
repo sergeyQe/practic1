@@ -27,10 +27,13 @@
     <ClCompile Include="tasks\tasks.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="personAge.h">
+    <ClCompile Include="common\personAge.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="common\personAge.h">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="personAge.c">
+    <ClCompile Include="month.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,6 +45,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="tasks\tasks.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="month.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -133,11 +133,13 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="common\personAge.c" />
     <ClCompile Include="common\personAge.h" />
+    <ClCompile Include="month.c" />
     <ClCompile Include="tasks\tasks.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\calc.h" />
     <ClInclude Include="common\io.h" />
+    <ClInclude Include="month.h" />
     <ClInclude Include="tasks\tasks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
