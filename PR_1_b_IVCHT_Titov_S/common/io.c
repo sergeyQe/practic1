@@ -1,9 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <xkeycheck.h>
+//#include <xkeycheck.h>
 #include <stdlib.h>
 #include "io.h"
 #include <time.h>
+
 
 
 
@@ -17,7 +18,7 @@ void scanIntNumbers(int mass[], int size)
 
 	for (int i = 0; i < size; i++) {
 		if (scanInt(&mass[i]) != 1) {
-			clearInputBuffer();
+			clearBuffer();
 		}
 
 	}
@@ -69,6 +70,17 @@ void scanDoubleNumbers(double mass[], int start, int end)
 		}
 	}
 }
+
+
+int scanInt(int* value) {
+	return scanf("%d", value) == 1;
+}
+
+void clearBuffer(void) {
+	int ch;
+	while ((ch = getchar()) != '\n' && ch != EOF) {}
+}
+
 #pragma endregion
 
 #pragma region 26
@@ -113,7 +125,7 @@ void printPutNumberOfMonth() {
 int scanNumberOfMonth() {
 	int numberOfMonth = 0;
 	if (scanInt(&numberOfMonth) != 1) {
-		clearInputBuffer();
+		clearBuffer();
 	}
 	return numberOfMonth;
 }

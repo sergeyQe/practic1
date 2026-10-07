@@ -7,8 +7,7 @@ int multi(int mass[], int size);
 double average(int sum, int size);
 double segmentLength(double coordinates[]);
 int mod(int number);
-int scanInt(int*value);
-void clearBuffer(void);
+
 #pragma endregion
 
 #pragma region 26

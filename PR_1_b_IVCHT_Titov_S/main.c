@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <xkeycheck.h>
+//#include <xkeycheck.h>
 #include <stdlib.h>
 #include "io.h"              
 #include "tasks/tasks.h"     
@@ -40,7 +40,8 @@ int main(void)
 			work26C(numberOfPracticalWord);
 			break;
 		case 27:
-			work27A(numberOfPracticalWord);
+			//work27A(numberOfPracticalWord);
+			work27B(numberOfPracticalWord);
 			break;
 
 		default:

@@ -7,6 +7,8 @@ void printEnterSomeNumbers(int size);
 void printNumbersWithSign(int mass[], int size, const char* sign);
 void printEnterCoordinates(char sign);
 void scanDoubleNumbers(double mass[],  int start, int end);
+int scanInt(int* value);
+void clearBuffer(void);
 #pragma endregion
 
 #pragma region 26
