@@ -155,5 +155,31 @@ void work28C(int numberOfWork)
 	freeArray(massOfDayAndMonth);
 }
 
+#pragma endregion
+
+#pragma region 29
+void work29A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	
+}
+
+void work29B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+}
+
+void work29C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+}
+
+#pragma endregion
+
+void work30A(int numberOfWork)
+{
+
+}
+
 
 #pragma endregion

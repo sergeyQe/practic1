@@ -21,4 +21,14 @@ int findMaxIntNumber(int* mass, int size);
 int countDuplicates(int mass[], int size);
 
 #pragma endregion
+
+#pragma region 29
+int A29A(double x, double y);
+int B29A(double x, double y);
+int A29B(double x, double y);
+int B29B(double x, double y);
+int C29B(double x, double y);
+int A29C(double x, double y);
+int B29C(double x, double y);
+#pragma endregion
 #endif

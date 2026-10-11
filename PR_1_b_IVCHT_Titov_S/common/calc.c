@@ -96,3 +96,45 @@ int countDuplicates(int mass[], int size)
 	return count;
 }
 #pragma endregion
+
+#pragma region 29
+int A29A(double x, double y)
+{
+	return pow(x, 2) + pow(y, 2) >= 4 && x <= 2 && y < x;
+}
+int B29A(double x, double y)
+{
+	return y >= 0 && y <= 0.5 && y <= sin(x);
+}
+int A29B(double x, double y)
+{
+	return pow(x, 2) + pow(y, 2) && (y >= x && x > 0 || x < 0);
+}
+int B29B(double x, double y)
+{
+	return y >= pow(x, 2) && (x<0 && y>x || x > 0 && y < x);
+}
+int C29B(double x, double y)
+{
+	return x >= 0 && ((pow(x, 2) + pow(y, 2)) <= 1 || y <= 1 && y > x - 1);
+}
+int A29C(double x, double y)
+{
+	if (y >= 4 - pow(x, 2) && x >= 0 && y <= pow(x, 2)) return 1;
+	if (y >= pow(x, 2)) {
+		if (y >= 2 - x) return 1;
+		if (y <= 2 - x && y > pow(x, 2) && y <= 4 - pow(x, 2)) return 1;
+		if (y <= 4 - pow(x, 2) && y <= 2 - x && y <= pow(x, 2) && x <= 0) return 1;
+	}
+	return 0;
+}
+int B29C(double x, double y)
+{
+	if ((pow(x, 2) + pow(y, 2)) >= 1 && y <= -x && y <= x) return 1;
+	if ((pow(x, 2) + pow(y, 2)) <= 1) {
+		if (y >= -x && y >= x) return 1;
+		if (y >= 0 && (y >= x || y >= -x)) return 1;
+	}
+	return 0;
+}
+#pragma endregion

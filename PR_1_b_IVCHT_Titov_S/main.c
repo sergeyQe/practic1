@@ -49,7 +49,10 @@ int main(void)
 			work28B(numberOfPracticalWord);
 			work28C(numberOfPracticalWord);
 			break;
-
+		case 29:
+			work29A(numberOfPracticalWord);
+			//work28B(numberOfPracticalWord);
+			//work28C(numberOfPracticalWord);
 		default:
 			printf("ѕрактической работы с таким номером нет\n");
 		}
