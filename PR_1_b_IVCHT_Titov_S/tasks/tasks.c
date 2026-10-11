@@ -4,6 +4,7 @@
 #include "io.h" 
 #include "calc.h"
 #include "personAge.h"
+#include "month.h"
 
 #pragma region 25
 void work25A(int numberOfWork)
@@ -130,6 +131,17 @@ void work28B(int numberOfWork)
 	int size = 2;
 	int* massOfDayAndMonth = malloc(size * sizeof(int));
 	scanIntNumbers(massOfDayAndMonth, size);
+	struct monthOfYear* months = listOfMonth();
+	printNextDay(findNextDay(months,  massOfDayAndMonth));
+
+
+}
+
+void work28C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	printInputDayAndMonth();
+
 
 }
 

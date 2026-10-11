@@ -2,13 +2,12 @@
 #define MONTH_H
 
 struct monthOfYear {
-	char name[32];
-	int numberOfMonth;
-	int countDayInMonth;
+	char* name;
+	int day;
 };
 
 struct monthOfYear* listOfMonth();
-struct monthOfYear findNextDay(const struct monthOfYear month,int*massOfDayAndMonth);
+struct monthOfYear findNextDay( struct monthOfYear *months,int*massOfDayAndMonth);
 void printNextDay(struct monthOfYear nextDay);
 
 #endif 
