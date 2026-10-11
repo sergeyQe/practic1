@@ -9,5 +9,7 @@ struct monthOfYear {
 struct monthOfYear* listOfMonth();
 struct monthOfYear findNextDay( struct monthOfYear *months,int*massOfDayAndMonth);
 void printNextDay(struct monthOfYear nextDay);
-
+int daysSinceYearStart(struct monthOfYear* months, int* massOfDayAndMonth);
+void printprintDaysUntilNewYear(int daysSinceYearStart);
+int isValidDate(struct monthOfYear* monthsOfYear, int date, int month);
 #endif 

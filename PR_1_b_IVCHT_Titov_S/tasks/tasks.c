@@ -11,7 +11,7 @@ void work25A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork,'A');
 	int size = 3;
-	int* massForThreeNumbers = malloc(size * sizeof(int));
+	int* massForThreeNumbers = allocateIntArray(size);
 	printEnterSomeNumbers(size);
 	scanIntNumbers(massForThreeNumbers, size);
 	printNumbersWithSign(massForThreeNumbers, size, "+");
@@ -21,18 +21,21 @@ void work25A(int numberOfWork)
 	printf("(");
 	printNumbersWithSign(massForThreeNumbers, size, "+");
 	printf(")/%d=%.3f\n", size, average(sum(massForThreeNumbers, size), size));
+	freeArray(massForThreeNumbers);
 }
 
 void work25B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
 	int size = 4;
-	double* massForCoordinates = malloc(size * sizeof(double));
+	double* massForCoordinates = allocateDoubleArray(size);
 	printEnterCoordinates('A');
 	scanDoubleNumbers(massForCoordinates, 0,2);
 	printEnterCoordinates('B');
 	scanDoubleNumbers(massForCoordinates, 2, 4);
 	printf("Длина отрезка AB =%.3f \n", segmentLength(massForCoordinates));
+	freeArray(massForCoordinates);
+
 }
 
 void work25C(int numberOfWork)
@@ -55,10 +58,11 @@ void work26A(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'A');
 	int size = 3;
 	printEnterSomeNumbers(size);
-	int* massForThreeNumbers = malloc(size * sizeof(int));
+	int* massForThreeNumbers = allocateIntArray(size);
 	scanIntNumbers(massForThreeNumbers, size);
 	sortDigitNumbers(massForThreeNumbers, size);
 	printMaxIntNumber(findMaxIntNumber(massForThreeNumbers, size));
+	freeArray(massForThreeNumbers);
 }
 
 void work26B(int numberOfWork)
@@ -66,10 +70,11 @@ void work26B(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'B');
 	int size = 5;
 	printEnterSomeNumbers(size);
-	int* massForFiveNumbers = malloc(size * sizeof(int));
+	int* massForFiveNumbers = allocateIntArray(size);
 	scanIntNumbers(massForFiveNumbers, size);
 	sortDigitNumbers(massForFiveNumbers, size);
 	printMaxIntNumber(findMaxIntNumber(massForFiveNumbers, size));
+	freeArray(massForFiveNumbers);
 }
 
 void work26C(int numberOfWork)
@@ -81,6 +86,7 @@ void work26C(int numberOfWork)
 	sortStruct(threePersons, size);
 	int countPerson = findCountOlderPeople(threePersons, size);
 	printOldPersons(threePersons, countPerson, size);
+	freeArray(threePersons);
 }
 
 #pragma endregion
@@ -90,11 +96,12 @@ void work27A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
 	int size = 3;
-	int* massForThreeNumbers = malloc(size * sizeof(int));
+	int* massForThreeNumbers = allocateIntArray(size);
 	printEnterSomeNumbers(size);
 	scanIntNumbers(massForThreeNumbers, size);
 	int count = countDuplicates(massForThreeNumbers, size);
 	printCountDublicateNumber(count);
+	freeArray(massForThreeNumbers);
 	
 }
 
@@ -129,20 +136,23 @@ void work28B(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'B');
 	printInputDayAndMonth();
 	int size = 2;
-	int* massOfDayAndMonth = malloc(size * sizeof(int));
+	int* massOfDayAndMonth = allocateIntArray(size);
 	scanIntNumbers(massOfDayAndMonth, size);
 	struct monthOfYear* months = listOfMonth();
 	printNextDay(findNextDay(months,  massOfDayAndMonth));
-
-
+	freeArray(massOfDayAndMonth);
 }
 
 void work28C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
 	printInputDayAndMonth();
-
-
+	int size = 2;
+	int* massOfDayAndMonth = allocateIntArray(size);
+	scanIntNumbers(massOfDayAndMonth, size);
+	struct monthOfYear* months = listOfMonth();
+	printprintDaysUntilNewYear(daysSinceYearStart(months, massOfDayAndMonth));
+	freeArray(massOfDayAndMonth);
 }
 
 

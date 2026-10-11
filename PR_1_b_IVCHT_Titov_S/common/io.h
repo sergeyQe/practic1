@@ -9,6 +9,9 @@ void printEnterCoordinates(char sign);
 void scanDoubleNumbers(double mass[],  int start, int end);
 int scanInt(int* value);
 void clearBuffer(void);
+int* allocateIntArray(int size);
+double* allocateDoubleArray(int size);
+void freeArray(void* mass);
 #pragma endregion
 
 #pragma region 26

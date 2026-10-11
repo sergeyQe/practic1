@@ -29,7 +29,7 @@ struct monthOfYear findNextDay( struct monthOfYear* monthsOfYear, int* massOfDay
 	int day = massOfDayAndMonth[0];
 	int month = massOfDayAndMonth[1];
 
-	if (month < 1 || month>12 ||day<1||day>31|| monthsOfYear[month - 1].day < day) return (struct monthOfYear) { "Неверная дата.",0};
+	if (!isValidDate(monthsOfYear, day, month)) return (struct monthOfYear) { "Неверная дата.",0};
 	if (monthsOfYear[month - 1].day == day) {
 		if (month == 12) {
 			return (struct monthOfYear) { "января", 1};
@@ -50,4 +50,29 @@ void printNextDay(struct monthOfYear nextDay)
 		return;
 	}
 	printf("Следующий день : %d %s\n", nextDay.day, nextDay.name);
+}
+
+
+int daysSinceYearStart(struct monthOfYear* months, int* massOfDayAndMonth) {
+	int day = massOfDayAndMonth[0];
+	int month = massOfDayAndMonth[1];
+	if (!isValidDate(months, day, month)) return 0;
+	int countDay = day;
+	for (int i = 0; i < month - 1; i++) {
+		countDay += months[i].day;
+	}
+	return countDay;
+}
+
+void printprintDaysUntilNewYear(int daysSinceYearStart)
+{
+	if (daysSinceYearStart == 0) printf("Неверная дата.");
+	else {
+		printf("Осталось %d дня до Нового Года.\n", 365 - daysSinceYearStart);
+	}
+}
+
+int isValidDate(struct monthOfYear* monthsOfYear, int day, int month)
+{
+	return !(month < 1 || month>12 || day < 1 || day>31 || monthsOfYear[month - 1].day < day);
 }

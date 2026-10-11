@@ -24,6 +24,32 @@ void scanIntNumbers(int mass[], int size)
 	}
 }
 
+void freeArray(void* mass) {
+	free(mass);
+}
+
+int* allocateIntArray(int size) 
+{
+	if (size <= 0) return NULL;
+	int* mass = malloc(size * sizeof(int));
+	if (mass == NULL) {
+		printf("Ошибка выделения памяти.\n");
+		return NULL;
+	}
+	return mass;
+}
+
+double* allocateDoubleArray(int size) 
+{
+	if (size <= 0) return NULL;
+	double* mass = malloc(size * sizeof(double));
+	if (mass == NULL) {
+		printf("Ошибка выделения памяти.\n");
+		return NULL;
+	}
+	return mass;
+}
+
 const char* numberWordForm(int size) {
 	if (size % 100 >= 11 && size % 100 <= 14) {
 		return "чисел";
