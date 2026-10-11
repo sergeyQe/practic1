@@ -151,7 +151,7 @@ void work28C(int numberOfWork)
 	int* massOfDayAndMonth = allocateIntArray(size);
 	scanIntNumbers(massOfDayAndMonth, size);
 	struct monthOfYear* months = listOfMonth();
-	printprintDaysUntilNewYear(daysSinceYearStart(months, massOfDayAndMonth));
+	printDaysUntilNewYear(daysSinceYearStart(months, massOfDayAndMonth));
 	freeArray(massOfDayAndMonth);
 }
 
@@ -178,7 +178,7 @@ void work29C(int numberOfWork)
 
 void work30A(int numberOfWork)
 {
-
+	printNumberOfWork(numberOfWork, 'A');
 }
 
 
