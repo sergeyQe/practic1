@@ -39,6 +39,16 @@ printInputDayAndMonth();
 #pragma endregion
 
 
+#pragma region 30
+
+int checkIsValidNumbers(int* mass, int size);
+void printSquareInRange(int* mass, int size);
+void printMultiResult(int* mass, int size);
+
+
+
+#pragma endregion
+
 
 
 #endif

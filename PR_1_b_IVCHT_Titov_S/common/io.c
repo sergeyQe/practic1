@@ -291,6 +291,32 @@ printInputDayAndMonth()
 	printf("¬ведите день и мес€ц : ");
 }
 
+int checkIsValidNumbers(int* mass, int size)
+{
+	for (int i = 0; i < size - 1; i++) {
+		if (mass[i] <= 0 || mass[i] > mass[i + 1]) return 0;
+	}
+	return 1;
+}
+
+void printSquareInRange(int* mass, int size)
+{
+	if (!checkIsValidNumbers(mass, size)) return "Ќевалидные числа";
+	int start = mass[0];
+	int end = mass[1];
+	for (int i = start; i <= end; i++) {
+		printf("%d*%d=%d\n", i, i, i * i);
+	}
+}
+
+void printMultiResult(int* mass, int size)
+{
+	int x = mass[0];
+	int y = mass[1];
+	int multi = multiWithPlus(x, y);
+	printf("%d*%d=%d\n", x, y, multi);
+}
+
 #pragma endregion
 
 

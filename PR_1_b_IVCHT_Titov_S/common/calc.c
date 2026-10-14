@@ -138,3 +138,42 @@ int B29C(double x, double y)
 	return 0;
 }
 #pragma endregion
+
+#pragma region 30
+int multiTwoNumbers(int x, int y)
+{
+	return x * y;
+}
+
+int multiWithPlus(int x, int y)
+{
+	int result = 0;
+	if (x == 0 || y == 0) return result;
+	if (y < 0) {
+		x = -x;
+	}
+	y = abs(y);
+	for (int i = 0; i < y; i++) {
+		result += x;
+	}
+	return result;
+}
+
+int sumFibonachi(int n)
+{
+	if (n <= 0) return 0;
+	int a = 0;
+	int b = 1;
+	int c;
+	int sum = 0;
+	while (b < n) {
+		sum += b;
+		c = a + b;
+		a = b;
+		b = c;
+		
+	}
+	return sum;
+}
+
+#pragma endregion

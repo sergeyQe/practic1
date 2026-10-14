@@ -179,6 +179,33 @@ void work29C(int numberOfWork)
 void work30A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
+	int size = 2;
+	int* twoNumbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(twoNumbers, size);
+	printSquareInRange(twoNumbers, size);
+	freeArray(twoNumbers);
+}
+
+void work30B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 2;
+	int* twoNumbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(twoNumbers, size);
+	printMultiResult(twoNumbers, size);
+	freeArray(twoNumbers);
+}
+
+void work30C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	printf("—ÛÏÏ‡ %d\n", sumFibonachi(number[0]));
 }
 
 

@@ -31,4 +31,12 @@ int C29B(double x, double y);
 int A29C(double x, double y);
 int B29C(double x, double y);
 #pragma endregion
+
+#pragma region 30
+int multiTwoNumbers(int x, int y);
+int multiWithPlus(int x, int y);
+int sumFibonachi(int x);
+
+
+#pragma endregion
 #endif

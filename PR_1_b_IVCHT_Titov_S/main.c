@@ -45,14 +45,19 @@ int main(void)
 			work27C(numberOfPracticalWord);
 			break;
 		case 28:
-			//work28A(numberOfPracticalWord);
-			//work28B(numberOfPracticalWord);
+			work28A(numberOfPracticalWord);
+			work28B(numberOfPracticalWord);
 			work28C(numberOfPracticalWord);
 			break;
 		case 29:
 			work29A(numberOfPracticalWord);
-			//work28B(numberOfPracticalWord);
-			//work28C(numberOfPracticalWord);
+			work29B(numberOfPracticalWord);
+			work29C(numberOfPracticalWord);
+		case 30:
+			//work30A(numberOfPracticalWord);
+			//work30B(numberOfPracticalWord);
+			work30C(numberOfPracticalWord);
+			break;
 		default:
 			printf("ѕрактической работы с таким номером нет\n");
 		}
