@@ -206,6 +206,33 @@ void work30C(int numberOfWork)
 	printEnterSomeNumbers(size);
 	scanIntNumbers(number, size);
 	printf("Сумма %d\n", sumFibonachi(number[0]));
+	freeArray(number);
+}
+
+#pragma endregion 
+
+#pragma region
+
+void work31A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	printf("сумма цифр %d\n", sumOfDigits(number[0]));
+	freeArray(number);
+}
+
+void work31B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+
+
 }
 
 

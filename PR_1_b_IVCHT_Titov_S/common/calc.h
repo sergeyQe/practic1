@@ -36,7 +36,10 @@ int B29C(double x, double y);
 int multiTwoNumbers(int x, int y);
 int multiWithPlus(int x, int y);
 int sumFibonachi(int x);
-
-
 #pragma endregion
+
+#pragma region 31
+int sumOfDigits(int number);
+
+#pragma endregion 
 #endif

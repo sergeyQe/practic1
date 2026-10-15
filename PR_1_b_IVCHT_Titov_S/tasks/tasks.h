@@ -18,4 +18,6 @@ void work29C(int numberOfWork);
 void work30A(int numberOfWork);
 void work30B(int numberOfWork);
 void work30C(int numberOfWork);
+void work31A(int numberOfWork);
+void work31B(int numberOfWork);
 #endif
