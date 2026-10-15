@@ -40,6 +40,7 @@ int sumFibonachi(int x);
 
 #pragma region 31
 int sumOfDigits(int number);
+int hasRepeatedDigits(int number);
 
 #pragma endregion 
 #endif

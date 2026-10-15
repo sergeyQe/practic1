@@ -187,4 +187,16 @@ int sumOfDigits(int number)
 	return sum;
 }
 
+int hasRepeatedDigits(int number)
+{
+	int mass[] = { 0,0,0,0,0,0,0,0,0,0 };
+	while (number > 0) {
+		int x = number % 10;
+		if (mass[x] == 1) return 1;
+		mass[x] = 1;
+		number /= 10;
+	}
+	return 0;
+}
+
 #pragma endregion
