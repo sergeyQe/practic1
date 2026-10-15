@@ -44,11 +44,12 @@ printInputDayAndMonth();
 int checkIsValidNumbers(int* mass, int size);
 void printSquareInRange(int* mass, int size);
 void printMultiResult(int* mass, int size);
+#pragma endregion
 
+#pragma region 31
+int hasConsecutiveEqualDigits(int number);
+void printResultYesOrNo(int number);
 
 
 #pragma endregion
-
-
-
 #endif

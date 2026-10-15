@@ -317,6 +317,27 @@ void printMultiResult(int* mass, int size)
 	printf("%d*%d=%d\n", x, y, multi);
 }
 
+int hasConsecutiveEqualDigits(int number)
+{
+	if (number <= 10) return 0;
+	int a ;
+	int b ;
+	while (number > 0) {
+		a = number % 10;
+		number /= 10;
+		if (number > 0) {
+			b = number % 10;
+			if (a == b) return 1;
+		}
+	}
+	return 0;
+}
+
+void printResultYesOrNo(int number)
+{
+	printf("%s\n", (number ? "Да" : "Нет"));
+}
+
 #pragma endregion
 
 

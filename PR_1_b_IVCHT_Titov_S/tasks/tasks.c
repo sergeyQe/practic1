@@ -231,8 +231,8 @@ void work31B(int numberOfWork)
 	int* number = allocateIntArray(size);
 	printEnterSomeNumbers(size);
 	scanIntNumbers(number, size);
-
-
+	printResultYesOrNo(hasConsecutiveEqualDigits(number[0]));
+	freeArray(number);
 }
 
 
