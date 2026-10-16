@@ -338,6 +338,13 @@ void printResultYesOrNo(int number)
 	printf("%s\n", (number ? "Да" : "Нет"));
 }
 
+void printNumbers(int* mass, int size)
+{
+	for (int i = 0; i < size; i++) {
+		printf("%d\n", mass[i]);
+	}
+}
+
 #pragma endregion
 
 

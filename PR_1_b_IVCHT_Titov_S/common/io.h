@@ -49,7 +49,10 @@ void printMultiResult(int* mass, int size);
 #pragma region 31
 int hasConsecutiveEqualDigits(int number);
 void printResultYesOrNo(int number);
+#pragma endregion
 
+#pragma region 32
+void printNumbers(int* mass, int size);
 
 #pragma endregion
 #endif

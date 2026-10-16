@@ -3,6 +3,7 @@
 #include "calc.h"
 #include <math.h>
 #include <stdio.h>
+#include "io.h"
 
 
 #pragma region 25
@@ -197,6 +198,19 @@ int hasRepeatedDigits(int number)
 		number /= 10;
 	}
 	return 0;
+}
+
+int* findDivisibleWithRemainder(int *countOut)
+{
+	int* result = allocateIntArray(90000);
+	int count = 0;
+	for (int i = 10000; i <= 99999; i++) {
+		if (i % 133 == 125 && i % 134 == 111) {
+			result[count++] = i;
+		}
+	}
+	*countOut = count;
+	return result;
 }
 
 #pragma endregion

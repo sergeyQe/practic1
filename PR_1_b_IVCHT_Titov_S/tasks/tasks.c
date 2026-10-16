@@ -211,7 +211,7 @@ void work30C(int numberOfWork)
 
 #pragma endregion 
 
-#pragma region
+#pragma region 31
 
 void work31A(int numberOfWork)
 {
@@ -237,13 +237,26 @@ void work31B(int numberOfWork)
 
 void work31C(int numberOfWork)
 {
-	printNumberOfWork(numberOfWork, 'B');
+	printNumberOfWork(numberOfWork, 'C');
 	int size = 1;
 	int* number = allocateIntArray(size);
 	printEnterSomeNumbers(size);
 	scanIntNumbers(number, size);
 	printResultYesOrNo(hasRepeatedDigits(number[0]));
 	freeArray(number);
+}
+
+#pragma endregion
+
+#pragma region 32
+
+void work32A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size=0;
+	int* numbers = findDivisibleWithRemainder(&size);
+	printNumbers(numbers, size);
+	freeArray(numbers);
 }
 
 
