@@ -235,5 +235,16 @@ void work31B(int numberOfWork)
 	freeArray(number);
 }
 
+void work31C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	printResultYesOrNo(hasRepeatedDigits(number[0]));
+	freeArray(number);
+}
+
 
 #pragma endregion
