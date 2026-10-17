@@ -47,6 +47,8 @@ int hasRepeatedDigits(int number);
 int* findDivisibleWithRemainder(int *size);
 int* findAmstrongNumbersInArray(int* size);
 int IsAmstrongNumber(int number, int sizeNumber);
-
+void findAutoMorphNumber(int number);
+int IsAutoMorph(int number, int square);
+int sizeOfDigitNumber(int number);
 #pragma endregion
 #endif

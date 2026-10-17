@@ -268,5 +268,16 @@ void work32B(int numberOfWork)
 	freeArray(numbers);
 }
 
+void work32C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	findAutoMorphNumber(number[0]);
+
+}
+
 
 #pragma endregion

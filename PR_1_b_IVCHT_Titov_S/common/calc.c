@@ -172,7 +172,7 @@ int sumFibonachi(int n)
 		c = a + b;
 		a = b;
 		b = c;
-		
+
 	}
 	return sum;
 }
@@ -200,7 +200,7 @@ int hasRepeatedDigits(int number)
 	return 0;
 }
 
-int* findDivisibleWithRemainder(int *countOut)
+int* findDivisibleWithRemainder(int* countOut)
 {
 	int* result = allocateIntArray(90000);
 	int count = 0;
@@ -219,7 +219,7 @@ int* findAmstrongNumbersInArray(int* countOut)
 	int count = 0;
 	int sizeNumber = 3;
 	for (int i = 100; i <= 999; i++) {
-		if (IsAmstrongNumber(i,sizeNumber)) {
+		if (IsAmstrongNumber(i, sizeNumber)) {
 			result[count++] = i;
 		}
 	}
@@ -232,10 +232,43 @@ int IsAmstrongNumber(int number, int sizeNumber)
 	int sum = 0;
 	int temp = number;
 	while (temp > 0) {
-		sum = sum + (pow(temp%10, sizeNumber));
+		sum = sum + (pow(temp % 10, sizeNumber));
 		temp /= 10;
 	}
 	return sum == number;
+}
+
+void findAutoMorphNumber(int number)
+{
+	for (int i = 1; i <= number; i++) {
+		int square = pow(i, 2);
+		if (IsAutoMorph(i, square))
+		{
+			printf("%d*%d=%d\n", i, i, square);
+		}
+	}
+}
+
+int IsAutoMorph(int number, int square)
+{
+	while (number > 0) {
+		if (number % 10 != square % 10) return 0;
+		number /= 10;
+		square /= 10;
+	}
+	return 1;
+}
+
+
+
+int sizeOfDigitNumber(int number)
+{
+	int result = 0;
+	while (number > 0) {
+		result++;
+		number /= 10;
+	}
+	return result;
 }
 
 #pragma endregion
