@@ -314,4 +314,16 @@ int* findSimpleNumbers(int* mass)
 	return nullptr;
 }
 
+int IsSimpleNumber(int number)
+{
+	if (number <= 0) return 0;
+	if (number == 2) return 1;
+	if (number % 2 == 0) return 0;
+	int end = sqrt(number);
+	for (int i = 3; i <= end; i+=2) {
+		if (number % i == 0) return 0;
+	}
+	return 1;
+}
+
 #pragma endregion

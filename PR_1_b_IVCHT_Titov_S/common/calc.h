@@ -55,6 +55,6 @@ int sizeOfDigitNumber(int number);
 
 #pragma region 33
 int* findSimpleNumbers(int* mass);
-int IsSimpleNumber
+int IsSimpleNumber(int number);
 #pragma endregion
 #endif
