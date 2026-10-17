@@ -213,4 +213,29 @@ int* findDivisibleWithRemainder(int *countOut)
 	return result;
 }
 
+int* findAmstrongNumbersInArray(int* countOut)
+{
+	int* result = allocateIntArray(900);
+	int count = 0;
+	int sizeNumber = 3;
+	for (int i = 100; i <= 999; i++) {
+		if (IsAmstrongNumber(i,sizeNumber)) {
+			result[count++] = i;
+		}
+	}
+	*countOut = count;
+	return result;
+}
+
+int IsAmstrongNumber(int number, int sizeNumber)
+{
+	int sum = 0;
+	int temp = number;
+	while (temp > 0) {
+		sum = sum + (pow(temp%10, sizeNumber));
+		temp /= 10;
+	}
+	return sum == number;
+}
+
 #pragma endregion

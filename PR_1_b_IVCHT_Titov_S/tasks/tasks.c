@@ -252,9 +252,18 @@ void work31C(int numberOfWork)
 
 void work32A(int numberOfWork)
 {
-	printNumberOfWork(numberOfWork, 'C');
+	printNumberOfWork(numberOfWork, 'A');
 	int size=0;
 	int* numbers = findDivisibleWithRemainder(&size);
+	printNumbers(numbers, size);
+	freeArray(numbers);
+}
+
+void work32B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 0;
+	int* numbers = findAmstrongNumbersInArray(&size);
 	printNumbers(numbers, size);
 	freeArray(numbers);
 }

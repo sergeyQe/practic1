@@ -44,7 +44,9 @@ int hasRepeatedDigits(int number);
 #pragma endregion 
 
 #pragma region 32
-int* findDivisibleWithRemainder(int *number);
+int* findDivisibleWithRemainder(int *size);
+int* findAmstrongNumbersInArray(int* size);
+int IsAmstrongNumber(int number, int sizeNumber);
 
 #pragma endregion
 #endif
