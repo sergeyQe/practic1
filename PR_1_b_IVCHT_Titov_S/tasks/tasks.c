@@ -280,5 +280,19 @@ void work32C(int numberOfWork)
 	printSquareNumbers(mass, sizeOut);
 }
 
+void work33A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	printInputNumericRange();
+	int size = 1;
+	int* number = allocateIntArray(size);
+	scanIntNumbers(number, size);
+
+}
+
+#pragma endregion
+
+#pragma region 33
+
 
 #pragma endregion

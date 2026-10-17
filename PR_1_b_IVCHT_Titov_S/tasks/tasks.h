@@ -24,4 +24,7 @@ void work31C(int numberOfWork);
 void work32A(int numberOfWork);
 void work32B(int numberOfWork);
 void work32C(int numberOfWork);
+void work33A(int numberOfWork);
+void work33B(int numberOfWork);
+void work33C(int numberOfWork);
 #endif

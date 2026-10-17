@@ -299,6 +299,7 @@ int checkIsValidNumbers(int* mass, int size)
 	return 1;
 }
 
+
 void printSquareInRange(int* mass, int size)
 {
 	if (!checkIsValidNumbers(mass, size)) return "Невалидные числа";
@@ -309,6 +310,9 @@ void printSquareInRange(int* mass, int size)
 	}
 }
 
+#pragma endregion
+
+#pragma region 30
 void printMultiResult(int* mass, int size)
 {
 	int x = mass[0];
@@ -333,6 +337,9 @@ int hasConsecutiveEqualDigits(int number)
 	return 0;
 }
 
+#pragma endregion
+
+#pragma region 31
 void printResultYesOrNo(int number)
 {
 	printf("%s\n", (number ? "Да" : "Нет"));
@@ -345,6 +352,7 @@ void printNumbers(int* mass, int size)
 	}
 }
 
+#pragma region 32
 void printSquareNumbers(int* numbers, int size)
 {
 	for (int i = 0; i < size; i++) {
@@ -353,6 +361,16 @@ void printSquareNumbers(int* numbers, int size)
 	}
 }
 
+
+
 #pragma endregion
 
+
+#pragma region 33
+void printInputNumericRange()
+{
+	printf("Введите границы диапазона : \n");
+}
+
+#pragma endregion 
 

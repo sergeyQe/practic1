@@ -57,6 +57,7 @@ void printNumbers(int* mass, int size);
 
 #pragma region 33
 void printSquareNumbers(int* numbers, int size);
+void printInputNumericRange();
 
 #pragma endregion
 #endif

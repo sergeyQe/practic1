@@ -52,4 +52,9 @@ int* findAutoMorphNumber(int number, int* outSize);
 int IsAutoMorph(int number, int square);
 int sizeOfDigitNumber(int number);
 #pragma endregion
+
+#pragma region 33
+int* findSimpleNumbers(int* mass);
+int IsSimpleNumber
+#pragma endregion
 #endif

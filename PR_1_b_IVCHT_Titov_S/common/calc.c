@@ -306,4 +306,12 @@ int sizeOfDigitNumber(int number)
 	return result;
 }
 
+int* findSimpleNumbers(int* mass)
+{
+	int start = mass[0];
+	int end = mass[1];
+
+	return nullptr;
+}
+
 #pragma endregion
