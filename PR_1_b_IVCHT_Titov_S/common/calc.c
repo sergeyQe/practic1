@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdio.h>
 #include "io.h"
+#include <string.h>
 
 
 #pragma region 25
@@ -200,30 +201,52 @@ int hasRepeatedDigits(int number)
 	return 0;
 }
 
-int* findDivisibleWithRemainder(int* countOut)
+int* newMassLength(int* mass, int sizeOld, int sizeNew)
 {
-	int* result = allocateIntArray(90000);
-	int count = 0;
+	if (sizeOld >= sizeNew) return mass;
+	int* newMass = allocateIntArray(sizeNew);
+	if (newMass == NULL) return NULL;
+	memcpy(newMass, mass, (sizeOld) * sizeof(int));
+	freeArray(mass);
+	return newMass;
+}
+
+int* findDivisibleWithRemainder(int* out_size)
+{
+	int size = 0;
+	int* result = NULL;
 	for (int i = 10000; i <= 99999; i++) {
 		if (i % 133 == 125 && i % 134 == 111) {
-			result[count++] = i;
+			int* tmp = newMassLength(result, size, size + 1);
+			if (tmp == NULL) {
+				freeArray(result);
+				return NULL;
+			}
+			result = tmp;
+			result[size++] = i;
 		}
 	}
-	*countOut = count;
+	*out_size = size;
 	return result;
 }
 
-int* findAmstrongNumbersInArray(int* countOut)
+int* findAmstrongNumbersInArray(int* sizeOut)
 {
-	int* result = allocateIntArray(900);
-	int count = 0;
+	int* result = NULL;
+	int size = 0;
 	int sizeNumber = 3;
 	for (int i = 100; i <= 999; i++) {
 		if (IsAmstrongNumber(i, sizeNumber)) {
-			result[count++] = i;
+			int* tmp = newMassLength(result, size, size + 1);
+			if (tmp == NULL) {
+				freeArray(result);
+				return NULL;
+			}
+			result = tmp;
+			result[size++] = i;
 		}
 	}
-	*countOut = count;
+	*sizeOut = size;
 	return result;
 }
 
@@ -238,16 +261,28 @@ int IsAmstrongNumber(int number, int sizeNumber)
 	return sum == number;
 }
 
-void findAutoMorphNumber(int number)
+int* findAutoMorphNumber(int number, int* outSize)
 {
+	int* result = NULL;
+	int size = 0;
 	for (int i = 1; i <= number; i++) {
 		int square = pow(i, 2);
 		if (IsAutoMorph(i, square))
 		{
-			printf("%d*%d=%d\n", i, i, square);
+			int* tmp = newMassLength(result, size, size + 1);
+			if (tmp == NULL) {
+				freeArray(result);
+				return NULL;
+			}
+			result = tmp;
+			result[size++] = i;
+
 		}
 	}
+	*outSize = size;
+	return result;
 }
+
 
 int IsAutoMorph(int number, int square)
 {

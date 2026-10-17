@@ -28,7 +28,7 @@ void freeArray(void* mass) {
 	free(mass);
 }
 
-int* allocateIntArray(int size) 
+int* allocateIntArray(int size)
 {
 	if (size <= 0) return NULL;
 	int* mass = malloc(size * sizeof(int));
@@ -39,7 +39,7 @@ int* allocateIntArray(int size)
 	return mass;
 }
 
-double* allocateDoubleArray(int size) 
+double* allocateDoubleArray(int size)
 {
 	if (size <= 0) return NULL;
 	double* mass = malloc(size * sizeof(double));
@@ -246,7 +246,7 @@ const char* monthNameByNumber(int numberOfMonth)
 }
 
 
-const char* seasonNameByNumber(int numberOfMonth) 
+const char* seasonNameByNumber(int numberOfMonth)
 {
 	char* season;
 	switch (numberOfMonth) {
@@ -320,8 +320,8 @@ void printMultiResult(int* mass, int size)
 int hasConsecutiveEqualDigits(int number)
 {
 	if (number <= 10) return 0;
-	int a ;
-	int b ;
+	int a;
+	int b;
 	while (number > 0) {
 		a = number % 10;
 		number /= 10;
@@ -342,6 +342,14 @@ void printNumbers(int* mass, int size)
 {
 	for (int i = 0; i < size; i++) {
 		printf("%d\n", mass[i]);
+	}
+}
+
+void printSquareNumbers(int* numbers, int size)
+{
+	for (int i = 0; i < size; i++) {
+		int number = numbers[i];
+		printf("%d*%d=%d\n", number, number, number * number);
 	}
 }
 

@@ -53,6 +53,10 @@ void printResultYesOrNo(int number);
 
 #pragma region 32
 void printNumbers(int* mass, int size);
+#pragma endregion
+
+#pragma region 33
+void printSquareNumbers(int* numbers, int size);
 
 #pragma endregion
 #endif

@@ -9,7 +9,7 @@
 #pragma region 25
 void work25A(int numberOfWork)
 {
-	printNumberOfWork(numberOfWork,'A');
+	printNumberOfWork(numberOfWork, 'A');
 	int size = 3;
 	int* massForThreeNumbers = allocateIntArray(size);
 	printEnterSomeNumbers(size);
@@ -30,7 +30,7 @@ void work25B(int numberOfWork)
 	int size = 4;
 	double* massForCoordinates = allocateDoubleArray(size);
 	printEnterCoordinates('A');
-	scanDoubleNumbers(massForCoordinates, 0,2);
+	scanDoubleNumbers(massForCoordinates, 0, 2);
 	printEnterCoordinates('B');
 	scanDoubleNumbers(massForCoordinates, 2, 4);
 	printf("Длина отрезка AB =%.3f \n", segmentLength(massForCoordinates));
@@ -102,7 +102,7 @@ void work27A(int numberOfWork)
 	int count = countDuplicates(massForThreeNumbers, size);
 	printCountDublicateNumber(count);
 	freeArray(massForThreeNumbers);
-	
+
 }
 
 void work27B(int numberOfWork) {
@@ -139,7 +139,7 @@ void work28B(int numberOfWork)
 	int* massOfDayAndMonth = allocateIntArray(size);
 	scanIntNumbers(massOfDayAndMonth, size);
 	struct monthOfYear* months = listOfMonth();
-	printNextDay(findNextDay(months,  massOfDayAndMonth));
+	printNextDay(findNextDay(months, massOfDayAndMonth));
 	freeArray(massOfDayAndMonth);
 }
 
@@ -161,7 +161,7 @@ void work28C(int numberOfWork)
 void work29A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
-	
+
 }
 
 void work29B(int numberOfWork)
@@ -253,7 +253,7 @@ void work31C(int numberOfWork)
 void work32A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
-	int size=0;
+	int size = 0;
 	int* numbers = findDivisibleWithRemainder(&size);
 	printNumbers(numbers, size);
 	freeArray(numbers);
@@ -275,8 +275,9 @@ void work32C(int numberOfWork)
 	int* number = allocateIntArray(size);
 	printEnterSomeNumbers(size);
 	scanIntNumbers(number, size);
-	findAutoMorphNumber(number[0]);
-
+	int sizeOut = 0;
+	int* mass = findAutoMorphNumber(number[0], &sizeOut);
+	printSquareNumbers(mass, sizeOut);
 }
 
 

@@ -44,10 +44,11 @@ int hasRepeatedDigits(int number);
 #pragma endregion 
 
 #pragma region 32
-int* findDivisibleWithRemainder(int *size);
+int* newMassLength(int* mass, int sizeOld, int sizeNew);
+int* findDivisibleWithRemainder(int* out_size);
 int* findAmstrongNumbersInArray(int* size);
 int IsAmstrongNumber(int number, int sizeNumber);
-void findAutoMorphNumber(int number);
+int* findAutoMorphNumber(int number, int* outSize);
 int IsAutoMorph(int number, int square);
 int sizeOfDigitNumber(int number);
 #pragma endregion
