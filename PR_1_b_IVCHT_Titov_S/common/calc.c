@@ -306,12 +306,27 @@ int sizeOfDigitNumber(int number)
 	return result;
 }
 
-int* findSimpleNumbers(int* mass)
+int* findSimpleNumbers(int* mass, int* out_size)
 {
 	int start = mass[0];
 	int end = mass[1];
+	int* result = NULL;
+	int size = 0;
+	for (int i = start; i <= end; i++) {
+		if (IsSimpleNumber(i)) {
+			int* tmp = newMassLength(result, size, size + 1);
+			if (tmp == NULL) {
+				freeArray(result);
+				return NULL;
+			}
+			result = tmp;
+			result[size++] = i;
 
-	return nullptr;
+		}
+	}
+
+	*out_size = size;
+	return result;
 }
 
 int IsSimpleNumber(int number)

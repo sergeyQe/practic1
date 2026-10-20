@@ -282,11 +282,20 @@ void work32C(int numberOfWork)
 
 void work33A(int numberOfWork)
 {
-	printNumberOfWork(numberOfWork, 'C');
+	printNumberOfWork(numberOfWork, 'A');
 	printInputNumericRange();
-	int size = 1;
+	int size = 2;
 	int* number = allocateIntArray(size);
 	scanIntNumbers(number, size);
+	int outSize = 0;
+	int* numbers = findSimpleNumbers(number, &outSize);
+	printNumbers(numbers, outSize);
+	freeArray(numbers);
+
+}
+
+void work33B(int numberOfWork)
+{
 
 }
 
