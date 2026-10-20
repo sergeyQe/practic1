@@ -56,5 +56,6 @@ int sizeOfDigitNumber(int number);
 #pragma region 33
 int* findSimpleNumbers(int* mass, int* outSize);
 int IsSimpleNumber(int number);
+void findPurchaseOptions();
 #pragma endregion
 #endif

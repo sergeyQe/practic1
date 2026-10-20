@@ -178,6 +178,10 @@ int sumFibonachi(int n)
 	return sum;
 }
 
+#pragma endregion
+
+#pragma region 31
+
 int sumOfDigits(int number)
 {
 	int sum = 0;
@@ -201,6 +205,10 @@ int hasRepeatedDigits(int number)
 	return 0;
 }
 
+#pragma endregion
+
+
+#pragma region 32
 int* newMassLength(int* mass, int sizeOld, int sizeNew)
 {
 	if (sizeOld >= sizeNew) return mass;
@@ -306,6 +314,10 @@ int sizeOfDigitNumber(int number)
 	return result;
 }
 
+#pragma endregion
+
+#pragma region 33
+
 int* findSimpleNumbers(int* mass, int* out_size)
 {
 	int start = mass[0];
@@ -335,10 +347,30 @@ int IsSimpleNumber(int number)
 	if (number == 2) return 1;
 	if (number % 2 == 0) return 0;
 	int end = (int)sqrt(number);
-	for (int i = 3; i <= end; i+=2) {
+	for (int i = 3; i <= end; i += 2) {
 		if (number % i == 0) return 0;
 	}
 	return 1;
 }
+
+void findPurchaseOptions()
+{
+	int weight = 185;
+	int x = 15;
+	int y = 17;
+	int z = 21;
+	int maxY = weight / y;
+	int maxZ = weight / z;
+	for (int i = 0; i <= maxY; i++) {
+		for (int j = 0; j <= maxZ; j++) {
+			int diff = weight - i * y - j * z;
+			if (diff >= 0 && diff % x == 0) {
+				printBox(x, y, z, diff / x, i, j);
+
+			}
+		}
+	}
+}
+
 
 #pragma endregion

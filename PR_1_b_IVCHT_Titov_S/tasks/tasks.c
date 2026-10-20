@@ -280,6 +280,8 @@ void work32C(int numberOfWork)
 	printSquareNumbers(mass, sizeOut);
 }
 
+#pragma endregion
+
 void work33A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -296,6 +298,8 @@ void work33A(int numberOfWork)
 
 void work33B(int numberOfWork)
 {
+	printNumberOfWork(numberOfWork, 'B');
+	findPurchaseOptions();
 
 }
 

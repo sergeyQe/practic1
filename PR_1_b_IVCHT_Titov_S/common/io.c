@@ -373,5 +373,20 @@ void printInputNumericRange()
 	printf("Введите границы диапазона : \n");
 }
 
+void printBox(int x, int y, int z, int countX, int countY, int countZ)
+{
+	if (countX != 0) {
+		printf("%d ящиков по %d кг\n", countX, x);
+	}
+	if (countY != 0) {
+		printf("%d ящиков по %d кг\n", countY, y);
+	}
+	if (countZ != 0) {
+		printf("%d ящиков по %d кг\n", countZ, z);
+	}
+
+	printf("\n");
+}
+
 #pragma endregion 
 
