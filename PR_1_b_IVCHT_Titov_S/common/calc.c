@@ -372,5 +372,37 @@ void findPurchaseOptions()
 	}
 }
 
+int* findSelfDividingNumbers(int number, int* outSize)
+{
+	int* result = NULL;
+	int size = 0;
+	for (int i = 1; i <= number; i++) {
+		if (IsSelfDividingNumber(i)) {
+			int* tmp = newMassLength(result, size, size + 1);
+			if (tmp == NULL) {
+				freeArray(result);
+				return NULL;
+			}
+			result = tmp;
+			result[size++] = i;
+		}
+	}
+	*outSize = size;
+	return result;
+}
+
+int IsSelfDividingNumber(int num)
+{
+	int temp = num;
+	while (temp > 0) {
+		int digit = temp % 10;
+		if (digit==0||num % digit != 0) {
+			return 0;
+		}
+		temp /= 10;
+	}
+	return 1;
+}
+
 
 #pragma endregion

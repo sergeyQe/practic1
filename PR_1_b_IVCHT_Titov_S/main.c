@@ -70,7 +70,8 @@ int main(void)
 			break;
 		case 33:
 			//work33A(numberOfPracticalWord);
-			work33B(numberOfPracticalWord);
+			//work33B(numberOfPracticalWord);
+			work33C(numberOfPracticalWord);
 			break;
 		default:
 			printf("ѕрактической работы с таким номером нет\n");

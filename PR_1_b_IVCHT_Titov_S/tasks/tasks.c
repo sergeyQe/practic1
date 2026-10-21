@@ -278,6 +278,8 @@ void work32C(int numberOfWork)
 	int sizeOut = 0;
 	int* mass = findAutoMorphNumber(number[0], &sizeOut);
 	printSquareNumbers(mass, sizeOut);
+	freeArray(number);
+	freeArray(mass);
 }
 
 #pragma endregion
@@ -293,6 +295,7 @@ void work33A(int numberOfWork)
 	int* numbers = findSimpleNumbers(number, &outSize);
 	printNumbers(numbers, outSize);
 	freeArray(numbers);
+	freeArray(number);
 
 }
 
@@ -301,6 +304,20 @@ void work33B(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'B');
 	findPurchaseOptions();
 
+}
+
+void work33C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'Ñ');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	int outSize = 0;
+	int* result = findSelfDividingNumbers(number[0], &outSize);
+	printNumbers(result, outSize);
+	freeArray(number);
+	freeArray(result);
 }
 
 #pragma endregion

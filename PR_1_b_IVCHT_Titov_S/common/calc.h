@@ -57,5 +57,7 @@ int sizeOfDigitNumber(int number);
 int* findSimpleNumbers(int* mass, int* outSize);
 int IsSimpleNumber(int number);
 void findPurchaseOptions();
+int* findSelfDividingNumbers(int number, int* outSize);
+int IsSelfDividingNumber(int num);
 #pragma endregion
 #endif
