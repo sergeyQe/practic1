@@ -345,12 +345,13 @@ void printResultYesOrNo(int number)
 	printf("%s\n", (number ? "Да" : "Нет"));
 }
 
-void printNumbers(int* mass, int size)
+void printNumbers(int* mass, int size, char sign)
 {
-	for (int i = 0; i < size; i++) {
-		printf("%d ", mass[i]);
+	if (size <= 0) return;
+	for (int i = 0; i < size-1; i++) {
+		printf("%d%c", mass[i], sign);
 	}
-	printf("\n");
+	printf("%d\n",mass[size-1]);
 }
 
 #pragma region 32
@@ -387,6 +388,18 @@ void printBox(int x, int y, int z, int countX, int countY, int countZ)
 
 	printf("\n");
 }
+#pragma endregion
+
+#pragma region 34
+void printSigns(int number, char sing)
+{
+	for (int i = 0; i < number; i++) {
+		printf("%c", sing);
+	}
+	printf("\n");
+}
+
+
 
 #pragma endregion 
 

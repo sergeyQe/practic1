@@ -60,4 +60,9 @@ void findPurchaseOptions();
 int* findSelfDividingNumbers(int number, int* outSize);
 int IsSelfDividingNumber(int num);
 #pragma endregion
+
+#pragma region 34
+int* findDigitInNumbers(int number, int* outSize);
+void reverseArray(int* mass, int size);
+#pragma endregion
 #endif

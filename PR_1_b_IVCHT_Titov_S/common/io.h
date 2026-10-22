@@ -52,12 +52,19 @@ void printResultYesOrNo(int number);
 #pragma endregion
 
 #pragma region 32
-void printNumbers(int* mass, int size);
+void printNumbers(int* mass, int size, char sign);
 #pragma endregion
 
 #pragma region 33
 void printSquareNumbers(int* numbers, int size);
 void printInputNumericRange();
 void printBox(int x, int y, int z, int countX, int countY, int countZ);
+#pragma endregion
+
+#pragma region 34
+void printSigns(int number, char sing);
+
+
+
 #pragma endregion
 #endif

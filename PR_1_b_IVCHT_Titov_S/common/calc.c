@@ -404,5 +404,39 @@ int IsSelfDividingNumber(int num)
 	return 1;
 }
 
+#pragma endregion 
+
+#pragma region 34
+int* findDigitInNumbers(int number, int* outSize)
+{
+	int* result = NULL;
+	int size = 0;
+	while (number > 0) {
+		int* tmp = newMassLength(result, size, size + 1);
+		if (tmp == NULL) {
+			freeArray(result);
+			return NULL;
+		}
+		result = tmp;
+		result[size++] = number%10;
+		number /= 10;
+	}
+
+	*outSize = size;
+	return result;
+}
+
+void reverseArray(int* mass, int size)
+{
+	if (mass == NULL || size <= 1) return;
+	
+	for (int i = 0; i < size/2; i++) {
+		int temp = mass[i];
+		mass[i] = mass[size - i - 1];
+		mass[size - i - 1] = temp; 
+	}
+	
+}
+
 
 #pragma endregion

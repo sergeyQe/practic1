@@ -255,7 +255,7 @@ void work32A(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'A');
 	int size = 0;
 	int* numbers = findDivisibleWithRemainder(&size);
-	printNumbers(numbers, size);
+	printNumbers(numbers, size, ' ');
 	freeArray(numbers);
 }
 
@@ -264,7 +264,7 @@ void work32B(int numberOfWork)
 	printNumberOfWork(numberOfWork, 'B');
 	int size = 0;
 	int* numbers = findAmstrongNumbersInArray(&size);
-	printNumbers(numbers, size);
+	printNumbers(numbers, size, ' ');
 	freeArray(numbers);
 }
 
@@ -284,6 +284,8 @@ void work32C(int numberOfWork)
 
 #pragma endregion
 
+#pragma region 33
+
 void work33A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -293,7 +295,7 @@ void work33A(int numberOfWork)
 	scanIntNumbers(number, size);
 	int outSize = 0;
 	int* numbers = findSimpleNumbers(number, &outSize);
-	printNumbers(numbers, outSize);
+	printNumbers(numbers, outSize, ' ');
 	freeArray(numbers);
 	freeArray(number);
 
@@ -315,14 +317,41 @@ void work33C(int numberOfWork)
 	scanIntNumbers(number, size);
 	int outSize = 0;
 	int* result = findSelfDividingNumbers(number[0], &outSize);
-	printNumbers(result, outSize);
+	printNumbers(result, outSize, ' ');
 	freeArray(number);
+	freeArray(result);
+}
+
+#pragma region 34
+
+void work34A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'Ñ');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	printSigns(number[0], '-');
+	freeArray(number);
+}
+
+void work34B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'Ñ');
+	int size = 1;
+	int* number = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(number, size);
+	int outSize = 0;
+	int* result = findDigitInNumbers(number[0], &outSize);
+	reverseArray(result, outSize);
+	printNumbers(result, outSize, '\n');
 	freeArray(result);
 }
 
 #pragma endregion
 
-#pragma region 33
+#pragma region 35
 
 
 #pragma endregion
