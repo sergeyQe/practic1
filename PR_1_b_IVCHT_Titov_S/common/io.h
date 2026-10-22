@@ -63,7 +63,8 @@ void printBox(int x, int y, int z, int countX, int countY, int countZ);
 
 #pragma region 34
 void printSigns(int number, char sing);
-
+void printChars(char* mass,int size, char sing);
+char* allocateCharArray(int size);
 
 
 #pragma endregion

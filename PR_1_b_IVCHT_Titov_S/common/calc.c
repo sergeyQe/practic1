@@ -209,7 +209,7 @@ int hasRepeatedDigits(int number)
 
 
 #pragma region 32
-int* newMassLength(int* mass, int sizeOld, int sizeNew)
+int* newMassIntLength(int* mass, int sizeOld, int sizeNew)
 {
 	if (sizeOld >= sizeNew) return mass;
 	int* newMass = allocateIntArray(sizeNew);
@@ -225,7 +225,7 @@ int* findDivisibleWithRemainder(int* out_size)
 	int* result = NULL;
 	for (int i = 10000; i <= 99999; i++) {
 		if (i % 133 == 125 && i % 134 == 111) {
-			int* tmp = newMassLength(result, size, size + 1);
+			int* tmp = newMassIntLength(result, size, size + 1);
 			if (tmp == NULL) {
 				freeArray(result);
 				return NULL;
@@ -245,7 +245,7 @@ int* findAmstrongNumbersInArray(int* sizeOut)
 	int sizeNumber = 3;
 	for (int i = 100; i <= 999; i++) {
 		if (IsAmstrongNumber(i, sizeNumber)) {
-			int* tmp = newMassLength(result, size, size + 1);
+			int* tmp = newMassIntLength(result, size, size + 1);
 			if (tmp == NULL) {
 				freeArray(result);
 				return NULL;
@@ -277,7 +277,7 @@ int* findAutoMorphNumber(int number, int* outSize)
 		int square = pow(i, 2);
 		if (IsAutoMorph(i, square))
 		{
-			int* tmp = newMassLength(result, size, size + 1);
+			int* tmp = newMassIntLength(result, size, size + 1);
 			if (tmp == NULL) {
 				freeArray(result);
 				return NULL;
@@ -326,7 +326,7 @@ int* findSimpleNumbers(int* mass, int* out_size)
 	int size = 0;
 	for (int i = start; i <= end; i++) {
 		if (IsSimpleNumber(i)) {
-			int* tmp = newMassLength(result, size, size + 1);
+			int* tmp = newMassIntLength(result, size, size + 1);
 			if (tmp == NULL) {
 				freeArray(result);
 				return NULL;
@@ -378,7 +378,7 @@ int* findSelfDividingNumbers(int number, int* outSize)
 	int size = 0;
 	for (int i = 1; i <= number; i++) {
 		if (IsSelfDividingNumber(i)) {
-			int* tmp = newMassLength(result, size, size + 1);
+			int* tmp = newMassIntLength(result, size, size + 1);
 			if (tmp == NULL) {
 				freeArray(result);
 				return NULL;
@@ -396,7 +396,7 @@ int IsSelfDividingNumber(int num)
 	int temp = num;
 	while (temp > 0) {
 		int digit = temp % 10;
-		if (digit==0||num % digit != 0) {
+		if (digit == 0 || num % digit != 0) {
 			return 0;
 		}
 		temp /= 10;
@@ -412,13 +412,13 @@ int* findDigitInNumbers(int number, int* outSize)
 	int* result = NULL;
 	int size = 0;
 	while (number > 0) {
-		int* tmp = newMassLength(result, size, size + 1);
+		int* tmp = newMassIntLength(result, size, size + 1);
 		if (tmp == NULL) {
 			freeArray(result);
 			return NULL;
 		}
 		result = tmp;
-		result[size++] = number%10;
+		result[size++] = number % 10;
 		number /= 10;
 	}
 
@@ -429,14 +429,144 @@ int* findDigitInNumbers(int number, int* outSize)
 void reverseArray(int* mass, int size)
 {
 	if (mass == NULL || size <= 1) return;
-	
-	for (int i = 0; i < size/2; i++) {
+
+	for (int i = 0; i < size / 2; i++) {
 		int temp = mass[i];
 		mass[i] = mass[size - i - 1];
-		mass[size - i - 1] = temp; 
+		mass[size - i - 1] = temp;
 	}
-	
+
 }
 
 
+char* newMassCharLength(char* mass, int sizeOld, int sizeNew)
+{
+	if (sizeOld >= sizeNew) return mass;
+	char* newMass = allocateCharArray(sizeNew);
+	if (newMass == NULL) return NULL;
+	memcpy(newMass, mass, (sizeOld) * sizeof(char));
+	freeArray(mass);
+	return newMass;
+}
+
+
+char* convertToRoman(int number, int* outSize)
+{
+	char* result = NULL;
+	int size = 0;
+	char* temp = NULL;
+	int digit=0;
+	while (number > 0) {
+		if (number > 999) {
+			 digit = number / 1000;
+			number %= 1000;
+			temp = newMassCharLength(result, size, size + digit);
+			for (int i = size; i < size + digit; i++) {
+				temp[i] = 'M';
+			}
+			
+			
+		}
+		else if (number >= 900) {
+			 digit = 2;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'C';
+			temp[size + 1] = 'M';
+			number %= 900;
+			
+		}
+		else if (number >= 500) {
+			 digit = 1;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'D';
+			number %= 500;
+		}
+		else if (number >= 400) {
+			digit = 2;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'C';
+			temp[size + 1] = 'D';
+			number %= 400;
+		}
+		else if (number >= 100) {
+			 digit = number / 100;
+			number %= 100;
+			temp = newMassCharLength(result, size, size + digit);
+			for (int i = size; i < size + digit; i++) {
+				temp[i] = 'C';
+			}
+		}
+		else if (number >= 90) {
+			digit = 2;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'X';
+			temp[size + 1] = 'C';
+			number %= 90;
+		}
+		else if (number >= 50) {
+			digit = (number - 50) / 10+1;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'L';
+			for (int i = size+1; i < size + digit; i++) {
+				temp[i] = 'X';
+			}
+			number = number - 50 - (10 * (digit-1));
+		}
+		else if (number >= 40) {
+			digit = 2;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'X';
+			temp[size + 1] = 'L';
+			number %= 40;
+		}
+		else if (number >= 10) {
+			digit = number / 10;
+			number %= 10;
+			temp = newMassCharLength(result, size, size + digit);
+			for (int i = size; i < size + digit; i++) {
+				temp[i] = 'X';
+			}
+		}
+		else if (number == 9) {
+			digit = 2;
+			number = 0;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'I';
+			temp[size + 1] = 'X';
+		}
+		else if (number >= 5) {
+			digit = (number - 5) + 1;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'V';
+			for (int i = size + 1; i < size + digit; i++) {
+				temp[i] = 'I';
+			}
+			number = 0;
+		}
+		else if (number == 4) {
+			digit = 2;
+			number = 0;
+			temp = newMassCharLength(result, size, size + digit);
+			temp[size] = 'I';
+			temp[size + 1] = 'V';
+		}
+		else {
+			digit = number;
+			number = 0;
+			temp = newMassCharLength(result, size, size + digit);
+			for (int i = size; i < size + digit; i++) {
+				temp[i] = 'I';
+			}
+		}
+		size = size + digit;
+		result = temp;
+	}
+	
+	*outSize = size;
+	return result;
+}
+//char* toRoman(int number)
+//{
+//	return nullptr;
+//}
 #pragma endregion

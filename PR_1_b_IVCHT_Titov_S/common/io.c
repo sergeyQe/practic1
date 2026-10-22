@@ -39,6 +39,17 @@ int* allocateIntArray(int size)
 	return mass;
 }
 
+char* allocateCharArray(int size)
+{
+	if (size <= 0) return NULL;
+	char* mass = malloc(size * sizeof(char));
+	if (mass == NULL) {
+		printf("Ошибка выделения памяти.\n");
+		return NULL;
+	}
+	return mass;
+}
+
 double* allocateDoubleArray(int size)
 {
 	if (size <= 0) return NULL;
@@ -398,6 +409,16 @@ void printSigns(int number, char sing)
 	}
 	printf("\n");
 }
+
+void printChars(char* mass, int size, char sing)
+{
+	for (int i = 0; i < size; i++) {
+		printf("%c%c",mass[i], sing);
+	}
+	printf("\n");
+}
+
+
 
 
 

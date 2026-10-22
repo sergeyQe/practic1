@@ -44,7 +44,7 @@ int hasRepeatedDigits(int number);
 #pragma endregion 
 
 #pragma region 32
-int* newMassLength(int* mass, int sizeOld, int sizeNew);
+int* newMassIntLength(int* mass, int sizeOld, int sizeNew);
 int* findDivisibleWithRemainder(int* out_size);
 int* findAmstrongNumbersInArray(int* size);
 int IsAmstrongNumber(int number, int sizeNumber);
@@ -64,5 +64,8 @@ int IsSelfDividingNumber(int num);
 #pragma region 34
 int* findDigitInNumbers(int number, int* outSize);
 void reverseArray(int* mass, int size);
+char* newMassCharLength(char* mass, int sizeOld, int sizeNew);
+char* convertToRoman(int number, int* outSize);
+
 #pragma endregion
 #endif
