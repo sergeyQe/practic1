@@ -50,6 +50,7 @@ char* allocateCharArray(int size)
 	return mass;
 }
 
+
 double* allocateDoubleArray(int size)
 {
 	if (size <= 0) return NULL;
@@ -418,9 +419,21 @@ void printChars(char* mass, int size, char sing)
 	printf("\n");
 }
 
-
-
-
-
 #pragma endregion 
+
+#pragma region 35
+void printEnterFractionNumber()
+{
+	printf("Введите числитель и знаменатель дроби:\n");
+}
+
+void printFractionNumber(int* mass)
+{
+	printf("После сокращения: %d/%d\n", mass[0], mass[1]);
+}
+
+
+
+
+#pragma endregion
 

@@ -376,6 +376,19 @@ void work35A(int numberOfWork)
 	scanIntNumbers(numbers, size);
 	sortDigitNumbers(numbers, size);
 	printNumbers(numbers, size, ' ');
+	freeArray(numbers);
+}
+
+void work35B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 2;
+	int* numbers = allocateIntArray(size);
+	printEnterFractionNumber();
+	scanIntNumbers(numbers, size);
+	simplifyFraction(numbers);
+	printFractionNumber(numbers);
+	freeArray(numbers);
 }
 
 #pragma endregion

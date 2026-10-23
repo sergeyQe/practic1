@@ -455,28 +455,28 @@ char* convertToRoman(int number, int* outSize)
 	char* result = NULL;
 	int size = 0;
 	char* temp = NULL;
-	int digit=0;
+	int digit = 0;
 	while (number > 0) {
 		if (number > 999) {
-			 digit = number / 1000;
+			digit = number / 1000;
 			number %= 1000;
 			temp = newMassCharLength(result, size, size + digit);
 			for (int i = size; i < size + digit; i++) {
 				temp[i] = 'M';
 			}
-			
-			
+
+
 		}
 		else if (number >= 900) {
-			 digit = 2;
+			digit = 2;
 			temp = newMassCharLength(result, size, size + digit);
 			temp[size] = 'C';
 			temp[size + 1] = 'M';
 			number %= 900;
-			
+
 		}
 		else if (number >= 500) {
-			 digit = 1;
+			digit = 1;
 			temp = newMassCharLength(result, size, size + digit);
 			temp[size] = 'D';
 			number %= 500;
@@ -489,7 +489,7 @@ char* convertToRoman(int number, int* outSize)
 			number %= 400;
 		}
 		else if (number >= 100) {
-			 digit = number / 100;
+			digit = number / 100;
 			number %= 100;
 			temp = newMassCharLength(result, size, size + digit);
 			for (int i = size; i < size + digit; i++) {
@@ -504,13 +504,13 @@ char* convertToRoman(int number, int* outSize)
 			number %= 90;
 		}
 		else if (number >= 50) {
-			digit = (number - 50) / 10+1;
+			digit = (number - 50) / 10 + 1;
 			temp = newMassCharLength(result, size, size + digit);
 			temp[size] = 'L';
-			for (int i = size+1; i < size + digit; i++) {
+			for (int i = size + 1; i < size + digit; i++) {
 				temp[i] = 'X';
 			}
-			number = number - 50 - (10 * (digit-1));
+			number = number - 50 - (10 * (digit - 1));
 		}
 		else if (number >= 40) {
 			digit = 2;
@@ -561,9 +561,26 @@ char* convertToRoman(int number, int* outSize)
 		size = size + digit;
 		result = temp;
 	}
-	
+
 	*outSize = size;
 	return result;
+}
+
+void simplifyFraction(int* mass)
+{
+	int numerator = mass[0];
+	int denominator = mass[1];
+	int maxNumber = (numerator > denominator) ? numerator : denominator;
+	for (int i = maxNumber; i > 1; i--) {
+		if (numerator % i == 0 && denominator % i==0) {
+			numerator /= i;
+			denominator /= i;
+			break;
+		}
+		
+	}
+	mass[0] = numerator;
+	mass[1] = denominator;
 }
 
 #pragma endregion

@@ -66,6 +66,10 @@ int* findDigitInNumbers(int number, int* outSize);
 void reverseArray(int* mass, int size);
 char* newMassCharLength(char* mass, int sizeOld, int sizeNew);
 char* convertToRoman(int number, int* outSize);
-
 #pragma endregion
+
+#pragma region 35
+void simplifyFraction(int * mass);
+
+#pragma endregion 
 #endif

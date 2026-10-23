@@ -65,7 +65,10 @@ void printBox(int x, int y, int z, int countX, int countY, int countZ);
 void printSigns(int number, char sing);
 void printChars(char* mass,int size, char sing);
 char* allocateCharArray(int size);
-
-
 #pragma endregion
+
+#pragma region 35
+void printEnterFractionNumber();
+void printFractionNumber(int * mass);
+#pragma endregion 
 #endif
