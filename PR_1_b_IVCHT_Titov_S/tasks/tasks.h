@@ -30,4 +30,7 @@ void work33C(int numberOfWork);
 void work34A(int numberOfWork);
 void work34B(int numberOfWork);
 void work34C(int numberOfWork);
+void work35A(int numberOfWork);
+void work35B(int numberOfWork);
+void work35C(int numberOfWork);
 #endif

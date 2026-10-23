@@ -352,7 +352,7 @@ void work34B(int numberOfWork)
 
 void work34C(int numberOfWork)
 {
-	printNumberOfWork(numberOfWork, 'B');
+	printNumberOfWork(numberOfWork, 'Ñ');
 	int size = 1;
 	int* numbers = allocateIntArray(size);
 	printEnterSomeNumbers(size);
@@ -360,13 +360,22 @@ void work34C(int numberOfWork)
 	int outSize = 0;
 	char* result = convertToRoman(numbers[0], &outSize);
 	printChars(result, outSize, '\0');
+	freeArray(result);
+	freeArray(numbers);
 }
-
-
 
 #pragma endregion
 
 #pragma region 35
-
+void work35A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	int size = 3;
+	int* numbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(numbers, size);
+	sortDigitNumbers(numbers, size);
+	printNumbers(numbers, size, ' ');
+}
 
 #pragma endregion

@@ -17,15 +17,13 @@ int main(void)
 		printf("Практические работы\n");
 		printf("Введите номер задачи 25-38\n");
 		printf("0 для выхода\n");
-
+		
 		if (scanf("%d", &numberOfPracticalWord) != 1) {
 			printf("Это не число\n");
-			int c;
-			while (((c = getchar()) != '\n' && c != EOF)) {
-				continue;
-			}
+			clearBuffer();
 			continue;
 		}
+		clearBuffer();
 		if (numberOfPracticalWord == 0) break;
 
 		switch (numberOfPracticalWord) {
@@ -74,9 +72,14 @@ int main(void)
 			work33C(numberOfPracticalWord);
 			break;
 		case 34:
-			//work34A(numberOfPracticalWord);
-			//work34B(numberOfPracticalWord);
+			work34A(numberOfPracticalWord);
+			work34B(numberOfPracticalWord);
 			work34C(numberOfPracticalWord);
+			break;
+		case 35:
+			work35A(numberOfPracticalWord);
+			//work35B(numberOfPracticalWord);
+			//work35C(numberOfPracticalWord);
 			break;
 		default:
 			printf("Практической работы с таким номером нет\n");
