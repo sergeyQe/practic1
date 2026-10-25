@@ -522,6 +522,16 @@ void printIsPerfectNumber(int isPerfect, int number) {
 	printf("Число %d совершенное.\n", number);
 }
 
+void printIsRelativelyPrime(int* mass, int isRealitivePrime)
+{
+	if (isRealitivePrime == 0) {
+		printf("Числа %d и %d не взаимно простые.\n",mass[0], mass[1]);
+	}
+	else {
+		printf("Числа %d и %d взаимно простые.\n", mass[0], mass[1]);
+	}
+}
+
 #pragma endregion
 
 

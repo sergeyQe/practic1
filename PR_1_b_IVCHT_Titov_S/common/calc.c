@@ -658,4 +658,17 @@ int isPerfectNumber(int number)
 	return sum == number;
 }
 
+int areRelativelyPrime(int* mass)
+{
+	int number1 = mass[0];
+	int number2 = mass[1];
+	int minNumber = (number1 <= number2) ? number1 : number2;
+	for (int i = 2; i <= minNumber; i++) {
+		if (number1 % i == 0 && number2 % i == 0) {
+			return 0;
+		}
+	}
+	return 1;
+}
+
 #pragma endregion

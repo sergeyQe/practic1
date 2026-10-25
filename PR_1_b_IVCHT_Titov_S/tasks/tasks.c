@@ -495,5 +495,17 @@ void work37A(int numberOfWork)
 	freeArray(numbers);
 }
 
+void work37B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 2;
+	int* numbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(numbers, size);
+	int isRealitivePrime = areRelativelyPrime(numbers);
+	printIsRelativelyPrime(numbers, isRealitivePrime);
+	freeArray(numbers);
+}
+
 
 #pragma endregion

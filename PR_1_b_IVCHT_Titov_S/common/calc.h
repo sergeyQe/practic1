@@ -92,6 +92,7 @@ void leastCommonMultiple(long* num1, long* num2, long* multiple);
 
 #pragma region 37
 int isPerfectNumber(int number);
+int areRelativelyPrime(int* mass);
 
 
 #pragma endregion

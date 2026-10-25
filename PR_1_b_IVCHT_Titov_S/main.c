@@ -87,8 +87,8 @@ int main(void)
 			work36C(numberOfPracticalWord);
 			break;
 		case 37:
-			work37A(numberOfPracticalWord);
-			//work37B(numberOfPracticalWord);
+			//work37A(numberOfPracticalWord);
+			work37B(numberOfPracticalWord);
 			//work37C(numberOfPracticalWord);
 			break;
 		default:
