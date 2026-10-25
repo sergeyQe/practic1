@@ -82,8 +82,9 @@ int main(void)
 			work35C(numberOfPracticalWord);
 			break;
 		case 36:
-			work36A(numberOfPracticalWord);
-			work36B(numberOfPracticalWord);
+			//work36A(numberOfPracticalWord);
+			//work36B(numberOfPracticalWord);
+			work36C(numberOfPracticalWord);
 			break;
 		default:
 			printf("ѕрактической работы с таким номером нет\n");

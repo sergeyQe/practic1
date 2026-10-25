@@ -585,17 +585,14 @@ void simplifyFraction(int* mass)
 
 void greatestCommonDivisor(long* num1, long* num2, long* divisor)
 {
-	*divisor = 1;
 	long number1 = *num1;
 	long number2 = *num2;
-	long min = (number1 <= number2) ? number1 : number2;
-	for (long i = min; i >= 2; i--) {
-		if (number1 % i == 0 && number2 % i == 0) {
-			*divisor = i;
-			return;
-		}
+	while (number2 != 0) {
+		long temp = number2;
+		number2 = number1 % number2;
+		number1 = temp;
 	}
-
+	*divisor = number1;
 }
 
 void leastCommonMultiple(long* num1, long* num2, long* multiple)

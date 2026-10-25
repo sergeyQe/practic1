@@ -73,7 +73,13 @@ char* allocateCharArray(int size);
 #pragma region 35
 void printEnterFractionNumber();
 void printFractionNumber(int * mass);
-void printNOD(int num1,int num2, int divizor);
-void printNOK(int num1, int num2, int multiple);
+void printNOD(long num1,long num2, long divizor);
+void printNOK(long num1, long num2, long multiple);
 #pragma endregion 
+
+#pragma region 36
+void printReverseNumber(int* mass, int size, char sign);
+
+#pragma endregion
+
 #endif

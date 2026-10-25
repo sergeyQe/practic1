@@ -428,4 +428,17 @@ void work36B(int numberOfWork)
 	freeArray(numbers);
 }
 
+void work36C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 1;
+	int* numbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(numbers, size);
+	int outSize = 0;
+	int* result = findDigitInNumbers(numbers[0], &outSize);
+	printReverseNumber(result, outSize, '\0');
+}
+
+
 #pragma endregion

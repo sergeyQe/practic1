@@ -468,6 +468,16 @@ void printNOK(long num1, long num2, long multiple)
 	printf("НОД(%d,%d)=%d\n", num1, num2, multiple);
 }
 
+#pragma endregion 
+
+#pragma region 36
+
+void printReverseNumber(int* mass, int size, char sign)
+{
+	printf("После переворота: ");
+	printNumbers(mass, size, '\0');
+}
+
 
 
 
