@@ -407,3 +407,11 @@ void work35C(int numberOfWork)
 }
 
 #pragma endregion
+
+#pragma region 36
+void work36A(int numberOfWork)
+{
+	work31A(numberOfWork);
+}
+
+#pragma endregion
