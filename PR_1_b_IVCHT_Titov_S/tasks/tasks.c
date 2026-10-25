@@ -24,6 +24,7 @@ void work25A(int numberOfWork)
 	freeArray(massForThreeNumbers);
 }
 
+
 void work25B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
@@ -37,6 +38,7 @@ void work25B(int numberOfWork)
 	freeArray(massForCoordinates);
 
 }
+
 
 void work25C(int numberOfWork)
 {
@@ -52,6 +54,8 @@ void work25C(int numberOfWork)
 }
 #pragma endregion
 
+
+
 #pragma region 26
 void work26A(int numberOfWork)
 {
@@ -65,6 +69,7 @@ void work26A(int numberOfWork)
 	freeArray(massForThreeNumbers);
 }
 
+
 void work26B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
@@ -77,6 +82,7 @@ void work26B(int numberOfWork)
 	freeArray(massForFiveNumbers);
 }
 
+
 void work26C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
@@ -88,8 +94,9 @@ void work26C(int numberOfWork)
 	printOldPersons(threePersons, countPerson, size);
 	freeArray(threePersons);
 }
-
 #pragma endregion
+
+
 
 #pragma region 27
 void work27A(int numberOfWork)
@@ -105,20 +112,24 @@ void work27A(int numberOfWork)
 
 }
 
+
 void work27B(int numberOfWork) {
 	printNumberOfWork(numberOfWork, 'B');
 	printPutNumberOfMonth();
 	int numberOfMonth = scanNumber();
 	printSeason(numberOfMonth);
 }
+
+
 void work27C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
 	printInputAge();
 	printAge(scanNumber());
 }
-
 #pragma endregion
+
+
 
 #pragma region 28
 void work28A(int numberOfWork)
@@ -130,6 +141,7 @@ void work28A(int numberOfWork)
 	const char* season = seasonNameByNumber(numberOfMonth);
 	printMonthAndSeason(month, season);
 }
+
 
 void work28B(int numberOfWork)
 {
@@ -143,6 +155,7 @@ void work28B(int numberOfWork)
 	freeArray(massOfDayAndMonth);
 }
 
+
 void work28C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
@@ -154,8 +167,9 @@ void work28C(int numberOfWork)
 	printDaysUntilNewYear(daysSinceYearStart(months, massOfDayAndMonth));
 	freeArray(massOfDayAndMonth);
 }
-
 #pragma endregion
+
+
 
 #pragma region 29
 void work29A(int numberOfWork)
@@ -164,18 +178,22 @@ void work29A(int numberOfWork)
 
 }
 
+
 void work29B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
 }
 
+
 void work29C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
 }
-
 #pragma endregion
 
+
+
+#pragma region 30
 void work30A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -186,6 +204,7 @@ void work30A(int numberOfWork)
 	printSquareInRange(twoNumbers, size);
 	freeArray(twoNumbers);
 }
+
 
 void work30B(int numberOfWork)
 {
@@ -198,6 +217,7 @@ void work30B(int numberOfWork)
 	freeArray(twoNumbers);
 }
 
+
 void work30C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
@@ -208,11 +228,11 @@ void work30C(int numberOfWork)
 	printf("Ñóììà %d\n", sumFibonachi(number[0]));
 	freeArray(number);
 }
-
 #pragma endregion 
 
-#pragma region 31
 
+
+#pragma region 31
 void work31A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -223,6 +243,7 @@ void work31A(int numberOfWork)
 	printf("ñóììà öèôð %d\n", sumOfDigits(number[0]));
 	freeArray(number);
 }
+
 
 void work31B(int numberOfWork)
 {
@@ -235,6 +256,7 @@ void work31B(int numberOfWork)
 	freeArray(number);
 }
 
+
 void work31C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
@@ -245,11 +267,11 @@ void work31C(int numberOfWork)
 	printResultYesOrNo(hasRepeatedDigits(number[0]));
 	freeArray(number);
 }
-
 #pragma endregion
 
-#pragma region 32
 
+
+#pragma region 32
 void work32A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -259,6 +281,7 @@ void work32A(int numberOfWork)
 	freeArray(numbers);
 }
 
+
 void work32B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
@@ -267,6 +290,7 @@ void work32B(int numberOfWork)
 	printNumbers(numbers, size, ' ');
 	freeArray(numbers);
 }
+
 
 void work32C(int numberOfWork)
 {
@@ -281,11 +305,12 @@ void work32C(int numberOfWork)
 	freeArray(number);
 	freeArray(mass);
 }
-
 #pragma endregion
 
-#pragma region 33
 
+
+
+#pragma region 33
 void work33A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -301,12 +326,14 @@ void work33A(int numberOfWork)
 
 }
 
+
 void work33B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
 	findPurchaseOptions();
 
 }
+
 
 void work33C(int numberOfWork)
 {
@@ -321,9 +348,11 @@ void work33C(int numberOfWork)
 	freeArray(number);
 	freeArray(result);
 }
+#pragma endregion
+
+
 
 #pragma region 34
-
 void work34A(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'A');
@@ -334,6 +363,7 @@ void work34A(int numberOfWork)
 	printSigns(number[0], '-');
 	freeArray(number);
 }
+
 
 void work34B(int numberOfWork)
 {
@@ -350,6 +380,7 @@ void work34B(int numberOfWork)
 	freeArray(numbers);
 }
 
+
 void work34C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'Ñ');
@@ -363,8 +394,9 @@ void work34C(int numberOfWork)
 	freeArray(result);
 	freeArray(numbers);
 }
-
 #pragma endregion
+
+
 
 #pragma region 35
 void work35A(int numberOfWork)
@@ -379,6 +411,7 @@ void work35A(int numberOfWork)
 	freeArray(numbers);
 }
 
+
 void work35B(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'B');
@@ -390,6 +423,7 @@ void work35B(int numberOfWork)
 	printFractionNumber(numbers);
 	freeArray(numbers);
 }
+
 
 void work35C(int numberOfWork)
 {
@@ -406,14 +440,16 @@ void work35C(int numberOfWork)
 	printNOK(numbers[0], numbers[1], multiple);
 	freeArray(numbers);
 }
-
 #pragma endregion
+
+
 
 #pragma region 36
 void work36A(int numberOfWork)
 {
 	work31A(numberOfWork);
 }
+
 
 void work36B(int numberOfWork)
 {
@@ -428,6 +464,7 @@ void work36B(int numberOfWork)
 	freeArray(numbers);
 }
 
+
 void work36C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
@@ -438,6 +475,24 @@ void work36C(int numberOfWork)
 	int outSize = 0;
 	int* result = findDigitInNumbers(numbers[0], &outSize);
 	printReverseNumber(result, outSize, '\0');
+	freeArray(numbers);
+	freeArray(result);
+}
+#pragma endregion
+
+
+
+#pragma region 37
+void work37A(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'A');
+	int size = 1;
+	int* numbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(numbers, size);
+	int isPerfect= isPerfectNumber(numbers[0]);
+	printIsPerfectNumber(isPerfect,numbers[0]);
+	freeArray(numbers);
 }
 
 

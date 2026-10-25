@@ -7,8 +7,9 @@ int multi(int mass[], int size);
 double average(int sum, int size);
 double segmentLength(double coordinates[]);
 int mod(int number);
-
 #pragma endregion
+
+
 
 #pragma region 26
 int* fillReverseNumber(int number, int size);
@@ -17,10 +18,13 @@ int compareInt(const void* a, const void* b);
 int findMaxIntNumber(int* mass, int size);
 #pragma endregion
 
+
+
 #pragma region 27
 int countDuplicates(int mass[], int size);
-
 #pragma endregion
+
+
 
 #pragma region 29
 int A29A(double x, double y);
@@ -32,16 +36,22 @@ int A29C(double x, double y);
 int B29C(double x, double y);
 #pragma endregion
 
+
+
 #pragma region 30
 int multiTwoNumbers(int x, int y);
 int multiWithPlus(int x, int y);
 int sumFibonachi(int x);
 #pragma endregion
 
+
+
 #pragma region 31
 int sumOfDigits(int number);
 int hasRepeatedDigits(int number);
 #pragma endregion 
+
+
 
 #pragma region 32
 int* newMassIntLength(int* mass, int sizeOld, int sizeNew);
@@ -61,6 +71,8 @@ int* findSelfDividingNumbers(int number, int* outSize);
 int IsSelfDividingNumber(int num);
 #pragma endregion
 
+
+
 #pragma region 34
 int* findDigitInNumbers(int number, int* outSize);
 void reverseArray(int* mass, int size);
@@ -68,10 +80,20 @@ char* newMassCharLength(char* mass, int sizeOld, int sizeNew);
 char* convertToRoman(int number, int* outSize);
 #pragma endregion
 
+
+
 #pragma region 35
 void simplifyFraction(int * mass);
 void greatestCommonDivisor(long* num1, long* num2, long* divisor);
 void leastCommonMultiple(long* num1, long* num2, long* multiple);
-
 #pragma endregion 
+
+
+
+#pragma region 37
+int isPerfectNumber(int number);
+
+
+#pragma endregion
+
 #endif

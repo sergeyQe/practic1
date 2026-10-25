@@ -64,6 +64,7 @@ int daysSinceYearStart(struct monthOfYear* months, int* massOfDayAndMonth) {
 	return countDay;
 }
 
+
 void printDaysUntilNewYear(int daysSinceYearStart)
 {
 	if (daysSinceYearStart == 0) printf("Неверная дата.");
@@ -74,11 +75,11 @@ void printDaysUntilNewYear(int daysSinceYearStart)
 }
 
 
-
 int isValidDate(struct monthOfYear* monthsOfYear, int day, int month)
 {
 	return !(month < 1 || month>12 || day < 1 || day>31 || monthsOfYear[month - 1].day < day);
 }
+
 
 char* getDayWord(int days)
 {

@@ -13,6 +13,7 @@
 	return persons;
 }
 
+
 int findCountOlderPeople(struct personAge* personAge, int size)
 {
 	int result = 0;
@@ -27,6 +28,7 @@ int findCountOlderPeople(struct personAge* personAge, int size)
 	return ++result;
 }
 
+
 void printOldPersons(struct personAge* personAge, int countPerson, int size)
 {
 	if (countPerson == 1) {
@@ -40,6 +42,7 @@ void printOldPersons(struct personAge* personAge, int countPerson, int size)
 	}
 	printf("\n");
 }
+
 
 void printStructPersons(struct personAge* personAge, int size)
 {
@@ -67,6 +70,7 @@ int compareStructPersonAge(const void* a, const void* b)
 	const struct personAge* y = b;
 	return (x->age > y->age) - (x->age < y->age);
 }
+
 
 void sortStruct(struct personAge* personAge, int size)
 {

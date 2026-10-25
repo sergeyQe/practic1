@@ -17,12 +17,16 @@ long* allocateLongArray(int size);
 void freeArray(void* mass);
 #pragma endregion
 
+
+
 #pragma region 26
 int generateRandomNumbers(void);
 void printGenerateNumber(int number);
 void printMaxIntNumber(int number);
 const char* numberWordForm(int size);
 #pragma endregion
+
+
 
 #pragma region 27
 void printCountDublicateNumber(int count);
@@ -33,30 +37,37 @@ void printInputAge(void);
 void printAge(int age);
 #pragma endregion
 
+
+
 #pragma region 28
 const char* monthNameByNumber(int numberOfMonth);
 const char* seasonNameByNumber(int numberOfMonth);
 printMonthAndSeason(const char* month, const char* season);
 printInputDayAndMonth();
-
 #pragma endregion
 
 
-#pragma region 30
 
+#pragma region 30
 int checkIsValidNumbers(int* mass, int size);
 void printSquareInRange(int* mass, int size);
 void printMultiResult(int* mass, int size);
 #pragma endregion
+
+
 
 #pragma region 31
 int hasConsecutiveEqualDigits(int number);
 void printResultYesOrNo(int number);
 #pragma endregion
 
+
+
 #pragma region 32
 void printNumbers(int* mass, int size, char sign);
 #pragma endregion
+
+
 
 #pragma region 33
 void printSquareNumbers(int* numbers, int size);
@@ -64,11 +75,15 @@ void printInputNumericRange();
 void printBox(int x, int y, int z, int countX, int countY, int countZ);
 #pragma endregion
 
+
+
 #pragma region 34
 void printSigns(int number, char sing);
 void printChars(char* mass,int size, char sing);
 char* allocateCharArray(int size);
 #pragma endregion
+
+
 
 #pragma region 35
 void printEnterFractionNumber();
@@ -77,8 +92,17 @@ void printNOD(long num1,long num2, long divizor);
 void printNOK(long num1, long num2, long multiple);
 #pragma endregion 
 
+
+
 #pragma region 36
 void printReverseNumber(int* mass, int size, char sign);
+#pragma endregion
+
+
+
+#pragma region 37
+void printIsPerfectNumber(int isPerfect, int number);
+	
 
 #pragma endregion
 

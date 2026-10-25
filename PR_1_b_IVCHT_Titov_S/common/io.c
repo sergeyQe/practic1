@@ -12,6 +12,8 @@ void printNumberOfWork(int numberOfWork, char letter) {
 	printf("Практическое задание %d%c\n", numberOfWork, letter);
 }
 
+
+
 #pragma region 25
 void scanIntNumbers(int mass[], int size)
 {
@@ -24,6 +26,7 @@ void scanIntNumbers(int mass[], int size)
 	}
 }
 
+
 void scanLongNumbers(long mass[], int size)
 {
 	for (int i = 0; i < size; i++) {
@@ -34,9 +37,11 @@ void scanLongNumbers(long mass[], int size)
 	}
 }
 
+
 void freeArray(void* mass) {
 	free(mass);
 }
+
 
 int* allocateIntArray(int size)
 {
@@ -48,7 +53,6 @@ int* allocateIntArray(int size)
 	}
 	return mass;
 }
-
 
 
 char* allocateCharArray(int size)
@@ -74,6 +78,7 @@ double* allocateDoubleArray(int size)
 	return mass;
 }
 
+
 long* allocateLongArray(int size)
 {
 	if (size <= 0) return NULL;
@@ -84,6 +89,7 @@ long* allocateLongArray(int size)
 	}
 	return mass;
 }
+
 
 const char* numberWordForm(int size) {
 	if (size % 100 >= 11 && size % 100 <= 14) {
@@ -97,7 +103,6 @@ const char* numberWordForm(int size) {
 	}
 	else return "чисел";
 }
-
 
 
 void printEnterSomeNumbers(int size)
@@ -115,6 +120,7 @@ void printNumbersWithSign(int mass[], int size, const char* sign)
 	printf("%d", mass[size - 1]);
 
 }
+
 
 void printEnterCoordinates(char sign)
 {
@@ -140,12 +146,15 @@ int scanInt(int* value) {
 int scanLong(long* value) {
 	return scanf("%d", value) == 1;
 }
+
+
 void clearBuffer(void) {
 	int ch;
 	while ((ch = getchar()) != '\n' && ch != EOF) {}
 }
-
 #pragma endregion
+
+
 
 #pragma region 26
 int generateRandomNumbers(void)
@@ -153,10 +162,12 @@ int generateRandomNumbers(void)
 	return rand() % 900 + 100;
 }
 
+
 void printGenerateNumber(int number)
 {
 	printf("Получено число \%d.\n", number);
 }
+
 
 void printMaxIntNumber(int number)
 {
@@ -167,7 +178,6 @@ void printMaxIntNumber(int number)
 
 
 #pragma region 27
-
 void printCountDublicateNumber(int count)
 {
 	if (count == 3) {
@@ -186,6 +196,7 @@ void printPutNumberOfMonth() {
 	printf("Введите номер месяца:\n");
 }
 
+
 int scanNumber() {
 	int number = 0;
 	if (scanInt(&number) != 1) {
@@ -193,6 +204,7 @@ int scanNumber() {
 	}
 	return number;
 }
+
 
 void printSeason(int numberOfMonth) {
 	if ((numberOfMonth >= 1 && numberOfMonth <= 2) || numberOfMonth == 12) {
@@ -212,10 +224,13 @@ void printSeason(int numberOfMonth) {
 	}
 }
 
+
 void printInputAge(void)
 {
 	printf("Введите возраст: ");
 }
+
+
 void printAge(int age)
 {
 	if (age <= 0 || age > 120) {
@@ -231,8 +246,8 @@ void printAge(int age)
 		printf("Вам %d года.\n", age);
 	}
 }
-
 #pragma endregion 
+
 
 
 #pragma region 28
@@ -315,6 +330,8 @@ const char* seasonNameByNumber(int numberOfMonth)
 	return season;
 
 }
+
+
 printMonthAndSeason(const char* month, const char* season)
 {
 	if (month == "неверный месяц") {
@@ -324,10 +341,12 @@ printMonthAndSeason(const char* month, const char* season)
 	printf("Этот месяц – %s, время года - %s.\n", month, season);
 }
 
+
 printInputDayAndMonth()
 {
 	printf("Введите день и месяц : ");
 }
+
 
 int checkIsValidNumbers(int* mass, int size)
 {
@@ -347,8 +366,9 @@ void printSquareInRange(int* mass, int size)
 		printf("%d*%d=%d\n", i, i, i * i);
 	}
 }
-
 #pragma endregion
+
+
 
 #pragma region 30
 void printMultiResult(int* mass, int size)
@@ -358,6 +378,7 @@ void printMultiResult(int* mass, int size)
 	int multi = multiWithPlus(x, y);
 	printf("%d*%d=%d\n", x, y, multi);
 }
+
 
 int hasConsecutiveEqualDigits(int number)
 {
@@ -374,14 +395,16 @@ int hasConsecutiveEqualDigits(int number)
 	}
 	return 0;
 }
-
 #pragma endregion
+
+
 
 #pragma region 31
 void printResultYesOrNo(int number)
 {
 	printf("%s\n", (number ? "Да" : "Нет"));
 }
+
 
 void printNumbers(int* mass, int size, char sign)
 {
@@ -391,6 +414,9 @@ void printNumbers(int* mass, int size, char sign)
 	}
 	printf("%d\n",mass[size-1]);
 }
+#pragma endregion
+
+
 
 #pragma region 32
 void printSquareNumbers(int* numbers, int size)
@@ -400,10 +426,8 @@ void printSquareNumbers(int* numbers, int size)
 		printf("%d*%d=%d\n", number, number, number * number);
 	}
 }
-
-
-
 #pragma endregion
+
 
 
 #pragma region 33
@@ -411,6 +435,7 @@ void printInputNumericRange()
 {
 	printf("Введите границы диапазона : \n");
 }
+
 
 void printBox(int x, int y, int z, int countX, int countY, int countZ)
 {
@@ -428,6 +453,8 @@ void printBox(int x, int y, int z, int countX, int countY, int countZ)
 }
 #pragma endregion
 
+
+
 #pragma region 34
 void printSigns(int number, char sing)
 {
@@ -437,6 +464,7 @@ void printSigns(int number, char sing)
 	printf("\n");
 }
 
+
 void printChars(char* mass, int size, char sing)
 {
 	for (int i = 0; i < size; i++) {
@@ -444,8 +472,9 @@ void printChars(char* mass, int size, char sing)
 	}
 	printf("\n");
 }
-
 #pragma endregion 
+
+
 
 #pragma region 35
 void printEnterFractionNumber()
@@ -453,33 +482,47 @@ void printEnterFractionNumber()
 	printf("Введите числитель и знаменатель дроби:\n");
 }
 
+
 void printFractionNumber(int* mass)
 {
 	printf("После сокращения: %d/%d\n", mass[0], mass[1]);
 }
+
 
 void printNOD(long num1, long num2, long divizor)
 {
 	printf("НОД(%d,%d)=%d\n", num1, num2, divizor);
 }
 
+
 void printNOK(long num1, long num2, long multiple)
 {
 	printf("НОД(%d,%d)=%d\n", num1, num2, multiple);
 }
-
 #pragma endregion 
 
-#pragma region 36
 
+
+#pragma region 36
 void printReverseNumber(int* mass, int size, char sign)
 {
 	printf("После переворота: ");
 	printNumbers(mass, size, '\0');
 }
+#pragma endregion
 
 
 
+#pragma region 37
+void printIsPerfectNumber(int isPerfect, int number) {
+	if (isPerfect == 0) {
+		printf("Число %d не совершенное.\n", number);
+		return;
+	}
+	printf("Число %d совершенное.\n", number);
+}
 
 #pragma endregion
+
+
 

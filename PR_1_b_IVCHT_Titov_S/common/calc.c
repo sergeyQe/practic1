@@ -33,15 +33,18 @@ double average(int sum, int size)
 	return (double)sum / (double)size;
 }
 
+
 double segmentLength(double coordinates[])
 {
 	return sqrt(pow(coordinates[2] - coordinates[0], 2) + pow(coordinates[3] - coordinates[1], 2));
 }
 
+
 int mod(int number)
 {
 	return number % 10;
 }
+
 
 int* fillReverseNumber(int number, int size)
 {
@@ -52,8 +55,9 @@ int* fillReverseNumber(int number, int size)
 	}
 	return mass;
 }
-
 #pragma endregion
+
+
 
 #pragma region 26
 int compareInt(const void* a, const void* b)
@@ -62,7 +66,6 @@ int compareInt(const void* a, const void* b)
 	int y = *(const int*)b;
 	return (x > y) - (x < y);
 }
-
 
 
 int findMaxIntNumber(int* mass, int size)
@@ -76,6 +79,8 @@ void sortDigitNumbers(int* mass, int size)
 	qsort(mass, size, sizeof(int), compareInt);
 }
 #pragma endregion
+
+
 
 #pragma region 27
 int countDuplicates(int mass[], int size)
@@ -99,27 +104,39 @@ int countDuplicates(int mass[], int size)
 }
 #pragma endregion
 
+
+
 #pragma region 29
 int A29A(double x, double y)
 {
 	return pow(x, 2) + pow(y, 2) >= 4 && x <= 2 && y < x;
 }
+
+
 int B29A(double x, double y)
 {
 	return y >= 0 && y <= 0.5 && y <= sin(x);
 }
+
+
 int A29B(double x, double y)
 {
 	return pow(x, 2) + pow(y, 2) && (y >= x && x > 0 || x < 0);
 }
+
+
 int B29B(double x, double y)
 {
 	return y >= pow(x, 2) && (x<0 && y>x || x > 0 && y < x);
 }
+
+
 int C29B(double x, double y)
 {
 	return x >= 0 && ((pow(x, 2) + pow(y, 2)) <= 1 || y <= 1 && y > x - 1);
 }
+
+
 int A29C(double x, double y)
 {
 	if (y >= 4 - pow(x, 2) && x >= 0 && y <= pow(x, 2)) return 1;
@@ -130,6 +147,8 @@ int A29C(double x, double y)
 	}
 	return 0;
 }
+
+
 int B29C(double x, double y)
 {
 	if ((pow(x, 2) + pow(y, 2)) >= 1 && y <= -x && y <= x) return 1;
@@ -141,11 +160,14 @@ int B29C(double x, double y)
 }
 #pragma endregion
 
+
+
 #pragma region 30
 int multiTwoNumbers(int x, int y)
 {
 	return x * y;
 }
+
 
 int multiWithPlus(int x, int y)
 {
@@ -160,6 +182,7 @@ int multiWithPlus(int x, int y)
 	}
 	return result;
 }
+
 
 int sumFibonachi(int n)
 {
@@ -177,11 +200,11 @@ int sumFibonachi(int n)
 	}
 	return sum;
 }
-
 #pragma endregion
 
-#pragma region 31
 
+
+#pragma region 31
 int sumOfDigits(int number)
 {
 	int sum = 0;
@@ -192,6 +215,7 @@ int sumOfDigits(int number)
 
 	return sum;
 }
+
 
 int hasRepeatedDigits(int number)
 {
@@ -204,8 +228,8 @@ int hasRepeatedDigits(int number)
 	}
 	return 0;
 }
-
 #pragma endregion
+
 
 
 #pragma region 32
@@ -218,6 +242,7 @@ int* newMassIntLength(int* mass, int sizeOld, int sizeNew)
 	freeArray(mass);
 	return newMass;
 }
+
 
 int* findDivisibleWithRemainder(int* out_size)
 {
@@ -237,6 +262,7 @@ int* findDivisibleWithRemainder(int* out_size)
 	*out_size = size;
 	return result;
 }
+
 
 int* findAmstrongNumbersInArray(int* sizeOut)
 {
@@ -258,6 +284,7 @@ int* findAmstrongNumbersInArray(int* sizeOut)
 	return result;
 }
 
+
 int IsAmstrongNumber(int number, int sizeNumber)
 {
 	int sum = 0;
@@ -268,6 +295,7 @@ int IsAmstrongNumber(int number, int sizeNumber)
 	}
 	return sum == number;
 }
+
 
 int* findAutoMorphNumber(int number, int* outSize)
 {
@@ -303,7 +331,6 @@ int IsAutoMorph(int number, int square)
 }
 
 
-
 int sizeOfDigitNumber(int number)
 {
 	int result = 0;
@@ -313,11 +340,11 @@ int sizeOfDigitNumber(int number)
 	}
 	return result;
 }
-
 #pragma endregion
 
-#pragma region 33
 
+
+#pragma region 33
 int* findSimpleNumbers(int* mass, int* out_size)
 {
 	int start = mass[0];
@@ -341,6 +368,7 @@ int* findSimpleNumbers(int* mass, int* out_size)
 	return result;
 }
 
+
 int IsSimpleNumber(int number)
 {
 	if (number <= 1) return 0;
@@ -352,6 +380,7 @@ int IsSimpleNumber(int number)
 	}
 	return 1;
 }
+
 
 void findPurchaseOptions()
 {
@@ -372,6 +401,7 @@ void findPurchaseOptions()
 	}
 }
 
+
 int* findSelfDividingNumbers(int number, int* outSize)
 {
 	int* result = NULL;
@@ -391,6 +421,7 @@ int* findSelfDividingNumbers(int number, int* outSize)
 	return result;
 }
 
+
 int IsSelfDividingNumber(int num)
 {
 	int temp = num;
@@ -403,8 +434,9 @@ int IsSelfDividingNumber(int num)
 	}
 	return 1;
 }
-
 #pragma endregion 
+
+
 
 #pragma region 34
 int* findDigitInNumbers(int number, int* outSize)
@@ -425,6 +457,7 @@ int* findDigitInNumbers(int number, int* outSize)
 	*outSize = size;
 	return result;
 }
+
 
 void reverseArray(int* mass, int size)
 {
@@ -565,7 +598,10 @@ char* convertToRoman(int number, int* outSize)
 	*outSize = size;
 	return result;
 }
+#pragma endregion
 
+
+#pragma region 35
 void simplifyFraction(int* mass)
 {
 	int numerator = mass[0];
@@ -583,6 +619,7 @@ void simplifyFraction(int* mass)
 	mass[1] = denominator;
 }
 
+
 void greatestCommonDivisor(long* num1, long* num2, long* divisor)
 {
 	long number1 = *num1;
@@ -595,6 +632,7 @@ void greatestCommonDivisor(long* num1, long* num2, long* divisor)
 	*divisor = number1;
 }
 
+
 void leastCommonMultiple(long* num1, long* num2, long* multiple)
 {
 	long number1 = *num1;
@@ -604,10 +642,20 @@ void leastCommonMultiple(long* num1, long* num2, long* multiple)
 	*multiple = (long)(number1 / divisor * number2);
 
 }
-
 #pragma endregion
 
-#pragma region 35
 
+
+#pragma region 37
+int isPerfectNumber(int number)
+{
+	int sum = 1;
+	for (int i = 2; i < number; i++) {
+		if (number % i == 0) {
+			sum += i;
+		}
+	}
+	return sum == number;
+}
 
 #pragma endregion
