@@ -532,6 +532,16 @@ void printIsRelativelyPrime(int* mass, int isRealitivePrime)
 	}
 }
 
+void printisHyperPrime(int* mass, int isHyperPrime)
+{
+	if (isHyperPrime == 0) {
+		printf("Число %d не гиперпростое.\n", mass[0]);
+	}
+	else {
+		printf("Число %d гиперпростое.\n", mass[0]);
+	}
+}
+
 #pragma endregion
 
 

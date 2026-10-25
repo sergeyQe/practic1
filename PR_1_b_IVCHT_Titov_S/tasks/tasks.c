@@ -507,5 +507,21 @@ void work37B(int numberOfWork)
 	freeArray(numbers);
 }
 
-
+void work37C(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'C');
+	int size = 1;
+	int* numbers = allocateIntArray(size);
+	printEnterSomeNumbers(size);
+	scanIntNumbers(numbers, size);
+	int isHyper = isHyperPrime(numbers[0]);
+	printisHyperPrime(numbers,isHyper);
+	freeArray(numbers);
+}
 #pragma endregion
+
+
+
+
+
+

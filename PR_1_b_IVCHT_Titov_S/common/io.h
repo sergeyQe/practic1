@@ -103,8 +103,7 @@ void printReverseNumber(int* mass, int size, char sign);
 #pragma region 37
 void printIsPerfectNumber(int isPerfect, int number);
 void printIsRelativelyPrime(int* mass, int isRealitivePrime);
-	
-
+void printisHyperPrime(int*mass, int isRealitivePrime);
 #pragma endregion
 
 #endif

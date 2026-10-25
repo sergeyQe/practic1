@@ -93,8 +93,12 @@ void leastCommonMultiple(long* num1, long* num2, long* multiple);
 #pragma region 37
 int isPerfectNumber(int number);
 int areRelativelyPrime(int* mass);
-
-
+int isHyperPrime(int num);
 #pragma endregion
+
+
+#pragma region 38
+long recursiveNOD(long a, long b, long* x, long* y);
+
 
 #endif

@@ -671,4 +671,34 @@ int areRelativelyPrime(int* mass)
 	return 1;
 }
 
+int isHyperPrime(int num)
+{
+	if (!IsSimpleNumber(num)) return 0;
+	
+	while (num > 0) {
+		
+		if (!IsSimpleNumber(num)) return 0;
+		num /=10;
+	}
+	return 1;
+}
+#pragma endregion
+
+
+#pragma region 38
+long recursiveNOD(long a, long b, long* x, long* y)
+{
+	if (b == 0) {
+		*x = 1;
+		*y = 0;
+		return a;
+	}
+	long x1, y1;
+	long g = recursiveNOD(b, a % b, &x1, &y1);
+	*x = y1;
+	*y = x1 - (a / b) * y1;
+	return g;
+}
+
+
 #pragma endregion
