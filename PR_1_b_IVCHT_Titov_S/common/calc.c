@@ -583,13 +583,13 @@ void simplifyFraction(int* mass)
 	mass[1] = denominator;
 }
 
-void greatestCommonDivisor(int* num1, int* num2, int* divisor)
+void greatestCommonDivisor(long* num1, long* num2, long* divisor)
 {
 	*divisor = 1;
-	int number1 = *num1;
-	int number2 = *num2;
-	int min = (number1 <= number2) ? number1 : number2;
-	for (int i = min; i >= 2; i--) {
+	long number1 = *num1;
+	long number2 = *num2;
+	long min = (number1 <= number2) ? number1 : number2;
+	for (long i = min; i >= 2; i--) {
 		if (number1 % i == 0 && number2 % i == 0) {
 			*divisor = i;
 			return;
@@ -598,13 +598,13 @@ void greatestCommonDivisor(int* num1, int* num2, int* divisor)
 
 }
 
-void leastCommonMultiple(int* num1, int* num2, int* multiple)
+void leastCommonMultiple(long* num1, long* num2, long* multiple)
 {
-	int number1 = *num1;
-	int number2 = *num2;
-	int divisor = 1;
+	long number1 = *num1;
+	long number2 = *num2;
+	long divisor = 1;
 	greatestCommonDivisor(&number1, &number2, &divisor);
-	*multiple = (int)(number1 / divisor * number2);
+	*multiple = (long)(number1 / divisor * number2);
 
 }
 

@@ -70,8 +70,8 @@ char* convertToRoman(int number, int* outSize);
 
 #pragma region 35
 void simplifyFraction(int * mass);
-void greatestCommonDivisor(int* num1, int* num2, int* divisor);
-void leastCommonMultiple(int* num1, int* num2, int* multiple);
+void greatestCommonDivisor(long* num1, long* num2, long* divisor);
+void leastCommonMultiple(long* num1, long* num2, long* multiple);
 
 #pragma endregion 
 #endif

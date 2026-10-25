@@ -395,15 +395,16 @@ void work35C(int numberOfWork)
 {
 	printNumberOfWork(numberOfWork, 'C');
 	int size = 2;
-	int* numbers = allocateIntArray(size);
+	long* numbers = allocateLongArray(size);
 	printEnterSomeNumbers(size);
-	scanIntNumbers(numbers, size);
+	scanLongNumbers(numbers, size);
 	int divisor = 1;
 	int multiple = 1;
 	greatestCommonDivisor(&numbers[0], &numbers[1], &divisor);
 	leastCommonMultiple(&numbers[0], &numbers[1], &multiple);
 	printNOD(numbers[0], numbers[1], divisor);
 	printNOK(numbers[0], numbers[1], multiple);
+	freeArray(numbers);
 }
 
 #pragma endregion
@@ -412,6 +413,19 @@ void work35C(int numberOfWork)
 void work36A(int numberOfWork)
 {
 	work31A(numberOfWork);
+}
+
+void work36B(int numberOfWork)
+{
+	printNumberOfWork(numberOfWork, 'B');
+	int size = 2;
+	long* numbers = allocateLongArray(size);
+	printEnterSomeNumbers(size);
+	scanLongNumbers(numbers, size);
+	int divisor = 1;
+	greatestCommonDivisor(&numbers[0], &numbers[1], &divisor);
+	printNOD(numbers[0], numbers[1], divisor);
+	freeArray(numbers);
 }
 
 #pragma endregion

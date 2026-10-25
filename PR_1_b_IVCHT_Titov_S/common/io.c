@@ -24,6 +24,16 @@ void scanIntNumbers(int mass[], int size)
 	}
 }
 
+void scanLongNumbers(long mass[], int size)
+{
+	for (int i = 0; i < size; i++) {
+		if (scanLong(&mass[i]) != 1) {
+			clearBuffer();
+		}
+
+	}
+}
+
 void freeArray(void* mass) {
 	free(mass);
 }
@@ -38,6 +48,8 @@ int* allocateIntArray(int size)
 	}
 	return mass;
 }
+
+
 
 char* allocateCharArray(int size)
 {
@@ -55,6 +67,17 @@ double* allocateDoubleArray(int size)
 {
 	if (size <= 0) return NULL;
 	double* mass = malloc(size * sizeof(double));
+	if (mass == NULL) {
+		printf("Ошибка выделения памяти.\n");
+		return NULL;
+	}
+	return mass;
+}
+
+long* allocateLongArray(int size)
+{
+	if (size <= 0) return NULL;
+	long* mass = malloc(size * sizeof(long));
 	if (mass == NULL) {
 		printf("Ошибка выделения памяти.\n");
 		return NULL;
@@ -114,6 +137,9 @@ int scanInt(int* value) {
 	return scanf("%d", value) == 1;
 }
 
+int scanLong(long* value) {
+	return scanf("%d", value) == 1;
+}
 void clearBuffer(void) {
 	int ch;
 	while ((ch = getchar()) != '\n' && ch != EOF) {}
@@ -432,12 +458,12 @@ void printFractionNumber(int* mass)
 	printf("После сокращения: %d/%d\n", mass[0], mass[1]);
 }
 
-void printNOD(int num1, int num2, int divizor)
+void printNOD(long num1, long num2, long divizor)
 {
 	printf("НОД(%d,%d)=%d\n", num1, num2, divizor);
 }
 
-void printNOK(int num1, int num2, int multiple)
+void printNOK(long num1, long num2, long multiple)
 {
 	printf("НОД(%d,%d)=%d\n", num1, num2, multiple);
 }

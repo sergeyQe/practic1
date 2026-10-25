@@ -3,14 +3,17 @@
 void printNumberOfWork(int numberOfWork, char letter);
 #pragma region 25
 void scanIntNumbers(int mass[], int size);
+void scanLongNumbers(long mass[], int size);
 void printEnterSomeNumbers(int size);
 void printNumbersWithSign(int mass[], int size, const char* sign);
 void printEnterCoordinates(char sign);
 void scanDoubleNumbers(double mass[],  int start, int end);
 int scanInt(int* value);
+int scanLong(long* value);
 void clearBuffer(void);
 int* allocateIntArray(int size);
 double* allocateDoubleArray(int size);
+long* allocateLongArray(int size);
 void freeArray(void* mass);
 #pragma endregion
 
