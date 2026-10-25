@@ -70,5 +70,7 @@ char* allocateCharArray(int size);
 #pragma region 35
 void printEnterFractionNumber();
 void printFractionNumber(int * mass);
+void printNOD(int num1,int num2, int divizor);
+void printNOK(int num1, int num2, int multiple);
 #pragma endregion 
 #endif

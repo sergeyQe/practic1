@@ -572,15 +572,40 @@ void simplifyFraction(int* mass)
 	int denominator = mass[1];
 	int maxNumber = (numerator > denominator) ? numerator : denominator;
 	for (int i = maxNumber; i > 1; i--) {
-		if (numerator % i == 0 && denominator % i==0) {
+		if (numerator % i == 0 && denominator % i == 0) {
 			numerator /= i;
 			denominator /= i;
 			break;
 		}
-		
+
 	}
 	mass[0] = numerator;
 	mass[1] = denominator;
+}
+
+void greatestCommonDivisor(int* num1, int* num2, int* divisor)
+{
+	*divisor = 1;
+	int number1 = *num1;
+	int number2 = *num2;
+	int min = (number1 <= number2) ? number1 : number2;
+	for (int i = min; i >= 2; i--) {
+		if (number1 % i == 0 && number2 % i == 0) {
+			*divisor = i;
+			return;
+		}
+	}
+
+}
+
+void leastCommonMultiple(int* num1, int* num2, int* multiple)
+{
+	int number1 = *num1;
+	int number2 = *num2;
+	int divisor = 1;
+	greatestCommonDivisor(&number1, &number2, &divisor);
+	*multiple = (int)(number1 / divisor * number2);
+
 }
 
 #pragma endregion

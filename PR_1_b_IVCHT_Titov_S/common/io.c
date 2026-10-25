@@ -432,6 +432,16 @@ void printFractionNumber(int* mass)
 	printf("После сокращения: %d/%d\n", mass[0], mass[1]);
 }
 
+void printNOD(int num1, int num2, int divizor)
+{
+	printf("НОД(%d,%d)=%d\n", num1, num2, divizor);
+}
+
+void printNOK(int num1, int num2, int multiple)
+{
+	printf("НОД(%d,%d)=%d\n", num1, num2, multiple);
+}
+
 
 
 
